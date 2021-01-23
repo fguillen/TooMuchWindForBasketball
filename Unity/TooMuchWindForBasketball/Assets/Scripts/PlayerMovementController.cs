@@ -23,6 +23,15 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         Move();
+        CheckShoot();
+    }
+
+    void CheckShoot()
+    {
+        if(Input.GetButtonDown("Jump"))
+        {
+            PlayerController.instance.ShootBall();
+        }
     }
 
     void Move()
@@ -39,19 +48,19 @@ public class PlayerMovementController : MonoBehaviour
             horizontal = 0;
         }
 
-        if(horizontal != 0)
-        {
-            animator.SetBool("walking", true);
-        } else
-        {
-            animator.SetBool("walking", false);
-        }
+        // if(horizontal != 0)
+        // {
+        //     animator.SetBool("walking", true);
+        // } else
+        // {
+        //     animator.SetBool("walking", false);
+        // }
 
         // Flip
-        if(horizontal < 0)
+        if(horizontal > 0)
         {
             figure.transform.localScale = new Vector3(-originalScaleX, figure.transform.localScale.y, figure.transform.localScale.z);
-        } else if(horizontal > 0)
+        } else if(horizontal < 0)
         {
             figure.transform.localScale = new Vector3(originalScaleX, figure.transform.localScale.y, figure.transform.localScale.z);
         }
