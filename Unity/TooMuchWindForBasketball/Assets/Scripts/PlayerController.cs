@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if(hasBall)
         {
-            Vector3 direction = new Vector3(-1f, 0.8f, 0f);
+            Vector3 direction = new Vector3(-0.8f, 0.9f, 0f);
 
             ball.transform.parent = null;
             ball.GetComponent<BallController>().Shoot(direction, ballImpulse);

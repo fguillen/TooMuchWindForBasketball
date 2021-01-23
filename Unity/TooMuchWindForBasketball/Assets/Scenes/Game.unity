@@ -198,10 +198,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 0.4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 6
   m_Material: {fileID: 6200000, guid: 9da210603e10a4a2f97878b0c87c751a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1685,6 +1685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f3172bb9b147b2b435be85a8e895c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basketEffect: {fileID: 2044415586195120737, guid: 3ea7624bcbe744b44bcc02da9557f255,
+    type: 3}
 --- !u!61 &1296942803
 BoxCollider2D:
   m_ObjectHideFlags: 0
