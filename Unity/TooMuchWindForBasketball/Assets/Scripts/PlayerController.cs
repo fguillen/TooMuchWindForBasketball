@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] int points;
 
+    [SerializeField] float ballImpulse;
+
     public static PlayerController instance;
     bool hasBall;
 
@@ -49,11 +51,10 @@ public class PlayerController : MonoBehaviour
     {
         if(hasBall)
         {
-            Vector3 direction = new Vector3(-1f, 1f, 0f);
-            float impulse = 500f;
+            Vector3 direction = new Vector3(-1f, 0.8f, 0f);
 
             ball.transform.parent = null;
-            ball.GetComponent<BallController>().Shoot(direction, impulse);
+            ball.GetComponent<BallController>().Shoot(direction, ballImpulse);
         }
     }
 

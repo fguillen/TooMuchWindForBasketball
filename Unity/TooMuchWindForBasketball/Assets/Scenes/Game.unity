@@ -201,7 +201,7 @@ Rigidbody2D:
   m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: 9da210603e10a4a2f97878b0c87c751a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -923,6 +923,7 @@ MonoBehaviour:
   ball: {fileID: 126952316}
   ballHandler: {fileID: 1943207670}
   points: 0
+  ballImpulse: 700
 --- !u!1 &513951353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618873326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.2, y: 0, z: 0}
+  m_LocalPosition: {x: -8.2, y: -5.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2143587412}
