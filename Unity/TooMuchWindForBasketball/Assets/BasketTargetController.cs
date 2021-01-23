@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasketTargetController : MonoBehaviour
 {
+    [SerializeField] ParticleSystem basketEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,12 @@ public class BasketTargetController : MonoBehaviour
         if(other.CompareTag("Ball"))
         {
             PlayerController.instance.IncreasePoints();
+            ShowBasketEffect();
         }
+    }
+
+    void ShowBasketEffect()
+    {
+        Instantiate(basketEffect, transform.position, Quaternion.identity);
     }
 }
