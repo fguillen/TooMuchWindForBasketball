@@ -22,7 +22,7 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        MoveByTheWind();
     }
 
     public void StopGravity()
@@ -35,5 +35,13 @@ public class BallController : MonoBehaviour
     {
         rb.isKinematic = false;
         rb.AddForce(direction * impulse);
+    }
+
+    public void MoveByTheWind()
+    {
+        Quaternion windDirection = Quaternion.Euler(0f, 0f, WindController.instance.rotationDegrees);
+        float windForce = WindController.instance.force;
+
+        rb.AddForce(windDirection * new Vector3(1f, 0f, 0f) * windForce);
     }
 }
