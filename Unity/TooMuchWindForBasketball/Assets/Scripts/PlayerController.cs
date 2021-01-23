@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject ball;    
     [SerializeField] GameObject ballHandler;
 
+    [SerializeField] int points;
+
     public static PlayerController instance;
     bool hasBall;
 
@@ -15,6 +17,8 @@ public class PlayerController : MonoBehaviour
     {
         hasBall = false;
         instance = this;
+
+        points = 0;
     }
 
     // Update is called once per frame
@@ -51,5 +55,11 @@ public class PlayerController : MonoBehaviour
             ball.transform.parent = null;
             ball.GetComponent<BallController>().Shoot(direction, impulse);
         }
+    }
+
+    public void IncreasePoints()
+    {
+        points ++;
+        CanvasController.instance.RenderPoints(points);
     }
 }
