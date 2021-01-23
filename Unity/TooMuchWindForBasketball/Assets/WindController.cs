@@ -21,6 +21,7 @@ public class WindController : MonoBehaviour
         instance = this;
         arrowOriginalSize = arrow.GetComponent<SpriteRenderer>().size;
         rotationDegrees = arrow.transform.localRotation.eulerAngles.z;
+        force = ((forceLimit.y - forceLimit.x) / 2) + forceLimit.x; // in the middle of the limits
     }
 
     // Update is called once per frame

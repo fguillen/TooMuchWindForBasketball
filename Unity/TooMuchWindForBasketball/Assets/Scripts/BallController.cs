@@ -13,18 +13,6 @@ public class BallController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        MoveByTheWind();
-    }
-
     public void StopGravity()
     {
         rb.isKinematic = true;
@@ -37,11 +25,5 @@ public class BallController : MonoBehaviour
         rb.AddForce(direction * impulse);
     }
 
-    public void MoveByTheWind()
-    {
-        Quaternion windDirection = Quaternion.Euler(0f, 0f, WindController.instance.rotationDegrees);
-        float windForce = WindController.instance.force;
 
-        rb.AddForce(windDirection * new Vector3(1f, 0f, 0f) * windForce);
-    }
 }
