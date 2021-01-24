@@ -25,5 +25,15 @@ public class BallController : MonoBehaviour
         rb.AddForce(direction * impulse);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        BallAudioController.instance.BouncingSound();
+    }
+
+    void OnCollisionEnter2D(Collision2D collisionInfo)
+    {
+        BallAudioController.instance.BouncingSound();
+    }
+
 
 }
