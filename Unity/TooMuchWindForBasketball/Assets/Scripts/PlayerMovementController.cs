@@ -23,15 +23,6 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         Move();
-        CheckShoot();
-    }
-
-    void CheckShoot()
-    {
-        if(Input.GetButtonDown("Jump"))
-        {
-            PlayerController.instance.ShootBall();
-        }
     }
 
     void Move()
@@ -59,9 +50,11 @@ public class PlayerMovementController : MonoBehaviour
         // Flip
         if(horizontal > 0)
         {
+            PlayerController.instance.isLookingLeft = false;
             figure.transform.localScale = new Vector3(-originalScaleX, figure.transform.localScale.y, figure.transform.localScale.z);
         } else if(horizontal < 0)
         {
+            PlayerController.instance.isLookingLeft = true;
             figure.transform.localScale = new Vector3(originalScaleX, figure.transform.localScale.y, figure.transform.localScale.z);
         }
 

@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float ballImpulse;
 
+    public bool isLookingLeft;
+
     public static PlayerController instance;
     bool hasBall;
 
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
         instance = this;
 
         points = 0;
+
+        isLookingLeft = true;
     }
 
     // Update is called once per frame
@@ -39,22 +43,26 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Collision");
-
         if(collision.gameObject.CompareTag("Ball"))
         {
             PickUpBall();
         }
     }
 
-    public void ShootBall()
+    public void ShootBall(float angle, float force)
     {
         if(hasBall)
         {
-            Vector3 direction = new Vector3(-0.8f, 0.9f, 0f);
+            Vector3 direction = Quaternion.Euler(0f, 0f, angle) * new Vector3(1f, 0f, 0f);
+
+            if(!isLookingLeft)
+                direction = new Vector3(-direction.x, direction.y, direction.z);
+            
+
+            print("ShootBall: " + force + ", direction: " + direction + ", angle: " + angle);
 
             ball.transform.parent = null;
-            ball.GetComponent<BallController>().Shoot(direction, ballImpulse);
+            ball.GetComponent<BallController>().Shoot(direction, force);
         }
     }
 
