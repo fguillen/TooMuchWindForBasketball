@@ -480,6 +480,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4837d2a3d31414ea3919d15adf18a64d, type: 3}
   - {fileID: 8300000, guid: 66c4f55257e1f45a8bf366008543c4ae, type: 3}
   - {fileID: 8300000, guid: dd1a21a3944d344c8b8c71934c2072f2, type: 3}
+  bouncingVolumeLimits: {x: 0.2, y: 1}
+  bouncingMagnitudeLimits: {x: 4, y: 30}
 --- !u!1 &144148539
 GameObject:
   m_ObjectHideFlags: 0

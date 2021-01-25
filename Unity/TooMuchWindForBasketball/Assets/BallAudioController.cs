@@ -10,15 +10,36 @@ public class BallAudioController : MonoBehaviour
     AudioSource audioSource;
     public static BallAudioController instance;
 
-    void Awake()
+    LinearProportionConverter magnitudeToVolume;
+
+    [SerializeField] Vector2 bouncingVolumeLimits;
+    [SerializeField] Vector2 bouncingMagnitudeLimits;
+
+    void Start()
     {
         instance = this;
         audioSource = GetComponent<AudioSource>();
+
+        IniMagnitudeToVolume();
     }
     
-    public void BouncingSound()
+    public void BouncingSound(float magnitude)
     {
-        AudioClip clip = bouncingClips[Random.Range(0, bouncingClips.Length)];
-        audioSource.PlayOneShot(clip);
+        float volume = magnitudeToVolume.CalculateDimension1Value(magnitude);
+        print("volume: " + volume);
+
+        if(volume > bouncingVolumeLimits.y)
+            volume = bouncingVolumeLimits.y;
+
+        if(volume > bouncingVolumeLimits.x)
+        {
+            AudioClip clip = bouncingClips[Random.Range(0, bouncingClips.Length)];
+            audioSource.PlayOneShot(clip, volume);
+        }
+    }
+
+    void IniMagnitudeToVolume()
+    {
+        magnitudeToVolume = new LinearProportionConverter(bouncingVolumeLimits.x, bouncingVolumeLimits.y, bouncingMagnitudeLimits.x, bouncingMagnitudeLimits.y);
     }
 }
