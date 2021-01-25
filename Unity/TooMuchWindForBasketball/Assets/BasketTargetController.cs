@@ -5,11 +5,12 @@ using UnityEngine;
 public class BasketTargetController : MonoBehaviour
 {
     [SerializeField] ParticleSystem basketEffect;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,5 +38,6 @@ public class BasketTargetController : MonoBehaviour
     {
         Instantiate(basketEffect, transform.position, Quaternion.identity);
         BasketNetController.instance.Move();
+        audioSource.Play();
     }
 }
