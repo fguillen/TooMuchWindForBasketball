@@ -33,6 +33,6 @@ public class LeavesSpawnerController : MonoBehaviour
         GameObject leaveTemplate = leaveTemplates[UnityEngine.Random.Range(0, leaveTemplates.Length)];
         GameObject leave = Instantiate(leaveTemplate, transform.position, Quaternion.identity);
 
-        leave.GetComponent<LeaveController>().rb.AddForce(new Vector3(0f, UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f));
+        leave.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f, 0f));
     }
 }

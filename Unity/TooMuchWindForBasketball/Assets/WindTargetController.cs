@@ -5,6 +5,7 @@ using UnityEngine;
 public class WindTargetController : MonoBehaviour
 {
     Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class WindTargetController : MonoBehaviour
     {
         MoveByTheWind();
     }
+
 
     public void MoveByTheWind()
     {
