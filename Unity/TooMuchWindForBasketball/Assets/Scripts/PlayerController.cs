@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
     public bool isLookingLeft;
 
     public static PlayerController instance;
-    bool hasBall;
+    public bool hasTheBallCaught { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        hasBall = false;
+        hasTheBallCaught = false;
         instance = this;
 
         points = 0;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         ball.transform.parent = ballHandler.transform;
         ball.transform.position = ballHandler.transform.position;
         ball.GetComponent<BallController>().StopGravity();
-        hasBall = true;
+        hasTheBallCaught = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -55,18 +55,17 @@ public class PlayerController : MonoBehaviour
 
     public void ShootBall(float angle, float force)
     {
-        if(hasBall)
+        if(hasTheBallCaught)
         {
+            hasTheBallCaught = false;
+
             Vector3 direction = Quaternion.Euler(0f, 0f, angle) * new Vector3(1f, 0f, 0f);
 
             if(!isLookingLeft)
                 direction = new Vector3(-direction.x, direction.y, direction.z);
             
-
-            print("ShootBall: " + force + ", direction: " + direction + ", angle: " + angle);
-
             ball.transform.parent = null;
-            ball.GetComponent<BallController>().Shoot(direction, force);
+            ball.GetComponent<BallController>().Shoot(direction, force);            
         }
     }
 

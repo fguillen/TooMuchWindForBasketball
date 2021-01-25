@@ -23,8 +23,6 @@ public class BasketTargetController : MonoBehaviour
     {
         if(other.CompareTag("Ball"))
         {   
-            print("Velocity: " + other.GetComponent<Rigidbody2D>().velocity);
-
             // Only if the ball is falling down
             if(other.GetComponent<Rigidbody2D>().velocity.y < 0)
             {

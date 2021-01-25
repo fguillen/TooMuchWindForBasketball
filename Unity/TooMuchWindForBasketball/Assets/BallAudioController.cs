@@ -26,7 +26,6 @@ public class BallAudioController : MonoBehaviour
     public void BouncingSound(float magnitude)
     {
         float volume = magnitudeToVolume.CalculateDimension1Value(magnitude);
-        print("volume: " + volume);
 
         if(volume > bouncingVolumeLimits.y)
             volume = bouncingVolumeLimits.y;

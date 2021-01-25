@@ -30,10 +30,17 @@ public class PlayerImpulseController : MonoBehaviour
 
     void Update()
     {
-        CheckAngle();
-        CheckForce();
-        CheckForceReleased();
-        RenderArrow();
+        if(PlayerController.instance.hasTheBallCaught)
+        {
+            arrowSprite.enabled = true;
+
+            CheckAngle();
+            CheckForce();
+            CheckForceReleased();
+            RenderArrow();
+        } else {
+            arrowSprite.enabled = false;
+        }
     }
 
     void CheckAngle()

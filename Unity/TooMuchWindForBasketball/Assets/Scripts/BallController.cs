@@ -33,8 +33,6 @@ public class BallController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         float magnitude = collisionInfo.relativeVelocity.magnitude;
-        print("Magnitude: " + magnitude);
-
         BallAudioController.instance.BouncingSound(magnitude);
     }
 
