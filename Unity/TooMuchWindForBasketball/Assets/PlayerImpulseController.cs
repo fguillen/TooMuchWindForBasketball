@@ -94,7 +94,7 @@ public class PlayerImpulseController : MonoBehaviour
         arrow.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
         var sizeMultiplier = TransformForceToSizeMultiplier(force);
-        arrowSprite.size = arrowOriginalSize * sizeMultiplier;
+        arrowSprite.size = new Vector2(arrowOriginalSize.x * sizeMultiplier, arrowOriginalSize.y);
     }
 
     float TransformForceToSizeMultiplier(float force)
