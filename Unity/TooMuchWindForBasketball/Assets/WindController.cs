@@ -5,7 +5,7 @@ using UnityEngine;
 public class WindController : MonoBehaviour
 {
     public static WindController instance;
-    [SerializeField] public float rotationDegrees;
+    [SerializeField] public float angle;
     [SerializeField] public float force;
     [SerializeField] Transform arrow;
 
@@ -20,22 +20,22 @@ public class WindController : MonoBehaviour
     {
         instance = this;
         arrowOriginalSize = arrow.GetComponent<SpriteRenderer>().size;
-        rotationDegrees = arrow.transform.localRotation.eulerAngles.z;
-        force = ((forceLimit.y - forceLimit.x) / 2) + forceLimit.x; // in the middle of the limits
+        angle = arrow.transform.localRotation.eulerAngles.z;
+        // force = ((forceLimit.y - forceLimit.x) / 2) + forceLimit.x; // in the middle of the limits
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeRotate();
-        ChangeForce();
+        // ChangeRotate();
+        // ChangeForce();
         RenderArrow();
     }
 
     void ChangeRotate()
     {
-        rotationDegrees = rotationDegrees + UnityEngine.Random.Range(-noiseRotation, noiseRotation);
-        rotationDegrees = rotationDegrees + UnityEngine.Random.Range(-noiseRotation, noiseForce);
+        angle = angle + UnityEngine.Random.Range(-noiseRotation, noiseRotation);
+        angle = angle + UnityEngine.Random.Range(-noiseRotation, noiseForce);
     }
 
     void ChangeForce(){
@@ -50,7 +50,7 @@ public class WindController : MonoBehaviour
 
     void RenderArrow()
     {
-        arrow.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, rotationDegrees));
+        arrow.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         arrow.GetComponent<SpriteRenderer>().size = arrowOriginalSize * force / 10;
     }
 }

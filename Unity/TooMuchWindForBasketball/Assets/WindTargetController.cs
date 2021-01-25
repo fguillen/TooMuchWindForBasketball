@@ -19,7 +19,7 @@ public class WindTargetController : MonoBehaviour
 
     public void MoveByTheWind()
     {
-        Quaternion windDirection = Quaternion.Euler(0f, 0f, WindController.instance.rotationDegrees);
+        Quaternion windDirection = Quaternion.Euler(0f, 0f, WindController.instance.angle);
         float windForce = WindController.instance.force;
 
         rb.AddForce(windDirection * new Vector3(1f, 0f, 0f) * windForce);

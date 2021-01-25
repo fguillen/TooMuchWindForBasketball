@@ -55,3 +55,6 @@ TagManager:
   - name: Characters
     uniqueID: 466913095
     locked: 0
+  - name: WindIndicator
+    uniqueID: 270943615
+    locked: 0
