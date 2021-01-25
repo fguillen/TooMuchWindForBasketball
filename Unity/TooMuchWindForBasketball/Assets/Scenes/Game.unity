@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83483982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.062, y: -0.003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.327, y: 0.018, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 301745473}
   m_RootOrder: 0
@@ -252,19 +252,19 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 466913095
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9046095728324299325, guid: ee67c561107bb4dfe9837104a775a567,
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -975749167277906879, guid: ee67c561107bb4dfe9837104a775a567,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1.9, y: 0.17}
+  m_Size: {x: 3.23, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &126952316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1516,7 @@ MonoBehaviour:
   force: 100
   forceStep: 1000
   forceLimits: {x: 100, y: 1000}
-  arrowSizeMultiplierLimits: {x: 0.5, y: 2}
+  arrowSizeMultiplierLimits: {x: 0.2, y: 2}
 --- !u!1 &513951353
 GameObject:
   m_ObjectHideFlags: 0

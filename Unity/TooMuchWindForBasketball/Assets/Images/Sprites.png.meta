@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -718,6 +718,27 @@ TextureImporter:
       bones: []
       spriteID: 024e97f98dbd0d510800000000000000
       internalID: 1571997993387287584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_25
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 1332
+        width: 323
+        height: 25
+      alignment: 9
+      pivot: {x: 0.0001643981, y: 0.44626465}
+      border: {x: 15, y: 0, z: 41, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14464865d417572f0800000000000000
+      internalID: -975749167277906879
       vertices: []
       indices: 
       edges: []
