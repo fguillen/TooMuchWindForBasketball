@@ -32,6 +32,7 @@ public class PlayerImpulseController : MonoBehaviour
     {
         CheckAngle();
         CheckForce();
+        CheckForceReleased();
         RenderArrow();
     }
 
@@ -63,15 +64,28 @@ public class PlayerImpulseController : MonoBehaviour
         if(Input.GetButton("Jump"))
         {
             force += forceStep * Time.deltaTime;
+
+            if(force > forceLimits.y)
+            {
+                force = forceLimits.y;
+                forceStep = -forceStep;
+            }
+
+            if(force < forceLimits.x)
+            {
+                force = forceLimits.x;
+                forceStep = -forceStep;
+            }
         }
+    }
 
-        if(force > forceLimits.y)
-            force = forceLimits.y;
-
+    void CheckForceReleased()
+    {
         if(Input.GetButtonUp("Jump"))
         {
             PlayerController.instance.ShootBall(angle, force);
             force = forceLimits.x;
+            forceStep = Mathf.Abs(forceStep);
         }
     }
 

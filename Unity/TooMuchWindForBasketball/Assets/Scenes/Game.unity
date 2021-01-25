@@ -1157,6 +1157,7 @@ MonoBehaviour:
   ballHandler: {fileID: 1943207670}
   points: 0
   ballImpulse: 700
+  isLookingLeft: 0
 --- !u!114 &506136118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,13 +1172,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 301745473}
   arrowSprite: {fileID: 83483984}
-  angle: 0
+  angle: 154.00938
   angleStep: 100
   angleLimits: {x: 120, y: 200}
-  force: 0
-  forceStep: 500
+  force: 100
+  forceStep: 1000
   forceLimits: {x: 100, y: 1000}
-  arrowSizeMultiplierLimits: {x: 0.5, y: 3}
+  arrowSizeMultiplierLimits: {x: 0.5, y: 2}
 --- !u!1 &513951353
 GameObject:
   m_ObjectHideFlags: 0
