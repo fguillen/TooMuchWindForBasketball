@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
+  - OldLeaf
+  - Leaf
   - Leave
   layers:
   - Default
@@ -21,8 +23,8 @@ TagManager:
   - Scenario
   - Floor
   - Leaves
-  - 
-  - 
+  - OldLeaves
+  - WindIndicator
   - 
   - 
   - 

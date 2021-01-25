@@ -21,14 +21,21 @@ public class BasketTargetController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Ball"))
-        {
-            PlayerController.instance.IncreasePoints();
-            ShowBasketEffect();
+        {   
+            print("Velocity: " + other.GetComponent<Rigidbody2D>().velocity);
+
+            // Only if the ball is falling down
+            if(other.GetComponent<Rigidbody2D>().velocity.y < 0)
+            {
+                PlayerController.instance.IncreasePoints();
+                ShowBasketEffect();
+            }
         }
     }
 
     void ShowBasketEffect()
     {
         Instantiate(basketEffect, transform.position, Quaternion.identity);
+        BasketNetController.instance.Move();
     }
 }

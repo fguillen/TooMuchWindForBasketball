@@ -30,7 +30,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // TODO: Remove this in production
+        if(Input.GetKeyDown("x"))
+        {
+            PickUpBall();
+        }
     }
 
     public void PickUpBall()

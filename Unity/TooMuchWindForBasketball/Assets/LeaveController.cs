@@ -21,7 +21,7 @@ public class LeaveController : MonoBehaviour
         timeToLive -= Time.deltaTime;
 
         if(timeToLive <= 0)
-            Destroy(this.gameObject);
+            gameObject.layer = LayerMask.NameToLayer("OldLeaves");
     }
 
 }
