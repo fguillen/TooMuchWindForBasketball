@@ -1554,6 +1554,10 @@ MonoBehaviour:
   angleLimits: {x: -180, y: -80}
   bigChangeSeconds: 10
   bigChangeSecondsNoise: 5
+  flipDirectionSeconds: 30
+  flipDirectionSecondsNoise: 10
+  flipDirectionSecondsDuration: 5
+  flipDirectionSecondsDurationNoise: 2
 --- !u!4 &513951355
 Transform:
   m_ObjectHideFlags: 0
