@@ -148,4 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  timeToLive: 20
+  timeToLiveLimits: {x: 0, y: 10}

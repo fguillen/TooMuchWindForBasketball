@@ -5,11 +5,17 @@ using UnityEngine;
 public class LeaveController : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D rb;
-    [SerializeField] float timeToLive;
+    [SerializeField] Vector2 timeToLiveLimits;
+    float timeToLiveCounter;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        timeToLiveCounter = Random.Range(timeToLiveLimits.x, timeToLiveLimits.y);
     }
 
     void Update()
@@ -18,9 +24,9 @@ public class LeaveController : MonoBehaviour
     }
 
     void CheckTimeToLive(){
-        timeToLive -= Time.deltaTime;
+        timeToLiveCounter -= Time.deltaTime;
 
-        if(timeToLive <= 0)
+        if(timeToLiveCounter <= 0)
             gameObject.layer = LayerMask.NameToLayer("OldLeaves");
     }
 
