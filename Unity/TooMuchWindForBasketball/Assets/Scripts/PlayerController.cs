@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             hasTheBallCaught = false;
 
-            Vector3 direction = Quaternion.Euler(0f, 0f, angle) * new Vector3(1f, 0f, 0f);
+            Vector3 direction = Quaternion.Euler(0f, 0f, angle) * new Vector3(0f, 1f, 0f);
 
             if(!isLookingLeft)
                 direction = new Vector3(-direction.x, direction.y, direction.z);

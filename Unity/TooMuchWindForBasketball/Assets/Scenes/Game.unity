@@ -207,13 +207,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83483982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 0.02, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.01, y: 0.23, z: 0}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 301745473}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &83483984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1045,14 +1045,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301745472}
-  m_LocalRotation: {x: 0, y: 0, z: -0.018586649, w: 0.9998273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.57, y: 0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 83483983}
   m_Father: {fileID: 1805024130}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.13}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &318112118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2853013676976036372, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   arrowSprite: {fileID: 83483984}
   angle: 154.00938
   angleStep: 100
-  angleLimits: {x: 120, y: 200}
+  angleLimits: {x: 40, y: 140}
   force: 100
   forceStep: 1000
   forceLimits: {x: 100, y: 1000}
