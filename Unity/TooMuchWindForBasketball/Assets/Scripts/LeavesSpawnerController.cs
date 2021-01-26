@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LeavesSpawnerController : MonoBehaviour
 {
-    [SerializeField] GameObject[] leaveTemplates;
+    [SerializeField] GameObject[] leafTemplates;
 
     [SerializeField] float time;
     [SerializeField] float timeCounter;
@@ -30,9 +30,11 @@ public class LeavesSpawnerController : MonoBehaviour
 
     void Spawn()
     {
-        GameObject leaveTemplate = leaveTemplates[UnityEngine.Random.Range(0, leaveTemplates.Length)];
-        GameObject leave = Instantiate(leaveTemplate, transform.position, Quaternion.identity);
+        GameObject leafTemplate = leafTemplates[UnityEngine.Random.Range(0, leafTemplates.Length)];
+        GameObject leaf = Instantiate(leafTemplate, transform.position, Quaternion.identity);
 
-        leave.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f, 0f));
+        leaf.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f, 0f));
+
+        LeavesController.instance.AddLeaf(leaf);
     }
 }

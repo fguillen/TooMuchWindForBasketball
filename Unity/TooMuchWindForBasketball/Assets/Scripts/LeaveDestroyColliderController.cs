@@ -9,6 +9,7 @@ public class LeaveDestroyColliderController : MonoBehaviour
     {        
         if(other.gameObject.CompareTag("Leaf"))
         {
+            LeavesController.instance.AddLeaf(other.gameObject);
             Destroy(other.gameObject);
         }
     }

@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329143643794253998, guid: 0c672c91feefd474abd569a3ff83c677,
+        type: 3}
+      propertyPath: m_Anchor.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 329143643794253998, guid: 0c672c91feefd474abd569a3ff83c677,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.33
+      objectReference: {fileID: 0}
     - target: {fileID: 7092209597846514848, guid: 0c672c91feefd474abd569a3ff83c677,
         type: 3}
       propertyPath: m_RootOrder

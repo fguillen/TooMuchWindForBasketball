@@ -7,6 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329143643794253998, guid: 0c672c91feefd474abd569a3ff83c677,
+        type: 3}
+      propertyPath: m_Anchor.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 329143643794253998, guid: 0c672c91feefd474abd569a3ff83c677,
+        type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 329143643794253998, guid: 0c672c91feefd474abd569a3ff83c677,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 329143643794253998, guid: 0c672c91feefd474abd569a3ff83c677,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 7092209597846514848, guid: 0c672c91feefd474abd569a3ff83c677,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 7092209597846514851, guid: 0c672c91feefd474abd569a3ff83c677,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.67
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7092209597846514851, guid: 0c672c91feefd474abd569a3ff83c677,
         type: 3}
@@ -76,12 +96,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7792300033668422012, guid: ee67c561107bb4dfe9837104a775a567,
+      objectReference: {fileID: 8279819551763339774, guid: ee67c561107bb4dfe9837104a775a567,
         type: 3}
     - target: {fileID: 7092209597846514855, guid: 0c672c91feefd474abd569a3ff83c677,
         type: 3}
       propertyPath: m_Name
-      value: Leave 03
+      value: Leave 01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c672c91feefd474abd569a3ff83c677, type: 3}

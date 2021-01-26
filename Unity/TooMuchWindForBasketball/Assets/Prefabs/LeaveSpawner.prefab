@@ -43,11 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eafae758422d4d07b6fb7c4cd815a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leaveTemplates:
+  leafTemplates:
   - {fileID: 7481930543683605140, guid: eb364810dd1aa442591696ad8f09dda6, type: 3}
   - {fileID: 7481930543683605140, guid: 906893d93ac39412292b84d75d8f3a22, type: 3}
   - {fileID: 7481930543683605140, guid: 969c7164a1d3645c180744edb8f51243, type: 3}
   - {fileID: 7481930543683605140, guid: 6f1b2663bc3a94159922e635c287b73b, type: 3}
-  time: 0.1
+  time: 0.01
   timeCounter: 0
   initialImpulseRange: 100

@@ -6,7 +6,10 @@ public class LeaveController : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D rb;
     [SerializeField] Vector2 timeToLiveLimits;
+    LeafOnTheCameraController leafOnTheCameraController;
     float timeToLiveCounter;
+
+    bool isSticky;
 
     void Awake()
     {
@@ -14,20 +17,46 @@ public class LeaveController : MonoBehaviour
     }
 
     void Start()
-    {
+    {    
+        isSticky = true;
         timeToLiveCounter = Random.Range(timeToLiveLimits.x, timeToLiveLimits.y);
+
+        leafOnTheCameraController = GetComponent<LeafOnTheCameraController>();
     }
 
     void Update()
     {
-        CheckTimeToLive();
+        if(isSticky)
+        {
+            CheckTimeToLive();
+        }
     }
 
     void CheckTimeToLive(){
         timeToLiveCounter -= Time.deltaTime;
 
         if(timeToLiveCounter <= 0)
-            gameObject.layer = LayerMask.NameToLayer("OldLeaves");
+        {
+            LetItGo();
+        }
+            
+    }
+
+    void LetItGo()
+    {
+        isSticky = false;
+
+        if(Random.Range(0, 10) == 0)
+        {
+            GoToTheCamera();
+        } else {
+            gameObject.layer = LayerMask.NameToLayer("NoStickyLeaves");
+        }
+    }
+
+    void GoToTheCamera()
+    {
+        leafOnTheCameraController.GoToTheCamera();
     }
 
 }

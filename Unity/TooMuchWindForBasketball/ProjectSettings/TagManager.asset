@@ -23,10 +23,10 @@ TagManager:
   - Scenario
   - Floor
   - Leaves
-  - OldLeaves
+  - NoStickyLeaves
   - WindIndicator
-  - 
-  - 
+  - CameraBox
+  - OnCameraLeaves
   - 
   - 
   - 
@@ -59,4 +59,7 @@ TagManager:
     locked: 0
   - name: WindIndicator
     uniqueID: 270943615
+    locked: 0
+  - name: InFrontOfCamera
+    uniqueID: 1392107693
     locked: 0
