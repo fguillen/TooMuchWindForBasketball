@@ -7,8 +7,6 @@ public class WindController : MonoBehaviour
     public static WindController instance;
     [SerializeField] public float angle;
     [SerializeField] public float force;
-    [SerializeField] Transform arrow;
-
     [SerializeField] float noiseRotation;
     [SerializeField] float noiseForce;
     [SerializeField] Vector2 forceLimit;
@@ -19,9 +17,6 @@ public class WindController : MonoBehaviour
     void Start()
     {
         instance = this;
-        arrowOriginalSize = arrow.GetComponent<SpriteRenderer>().size;
-        angle = arrow.transform.localRotation.eulerAngles.z;
-        // force = ((forceLimit.y - forceLimit.x) / 2) + forceLimit.x; // in the middle of the limits
     }
 
     // Update is called once per frame
@@ -29,7 +24,6 @@ public class WindController : MonoBehaviour
     {
         // ChangeRotate();
         // ChangeForce();
-        RenderArrow();
     }
 
     void ChangeRotate()
@@ -46,11 +40,5 @@ public class WindController : MonoBehaviour
 
         if(force > forceLimit.y)
             force = forceLimit.y;
-    }
-
-    void RenderArrow()
-    {
-        arrow.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        arrow.GetComponent<SpriteRenderer>().size = arrowOriginalSize * force / 10;
     }
 }
