@@ -1,6 +1,6 @@
 # Too Much Wind For Basketball
 
-I am alone, I am playing basketball for my self, and it is very windy
+I am alone, I am playing basketball for my self and it is very windy
 
 ## Intro 
 
