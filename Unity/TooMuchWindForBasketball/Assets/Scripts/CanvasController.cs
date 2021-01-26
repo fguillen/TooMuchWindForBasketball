@@ -23,16 +23,16 @@ public class CanvasController : MonoBehaviour
 
     public void RenderPoints(int value)
     {
-        pointsText.text = value.ToString();
+        pointsText.text = "Points: " + value.ToString();
     }
 
     public void RenderForce()
     {
-        forceText.text = "Force: " + WindController.instance.force.ToString();
+        forceText.text = "Wind Force: " + Mathf.CeilToInt(WindController.instance.force).ToString();
     }
 
     public void RenderAngle()
     {
-        angleText.text = "Angle: " + WindController.instance.angle.ToString();
+        angleText.text = "Wind Angle: " + Mathf.CeilToInt(WindController.instance.angle).ToString();
     }
 }
