@@ -33,7 +33,10 @@ public class LeavesSpawnerController : MonoBehaviour
         GameObject leafTemplate = leafTemplates[UnityEngine.Random.Range(0, leafTemplates.Length)];
         GameObject leaf = Instantiate(leafTemplate, transform.position, Quaternion.identity);
 
-        leaf.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f, 0f));
+        if(leaf.GetComponent<LeaveController>())
+        {
+            leaf.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f, 0f));
+        }
 
         LeavesController.instance.AddLeaf(leaf);
     }

@@ -27,7 +27,7 @@ TagManager:
   - WindIndicator
   - CameraBox
   - OnCameraLeaves
-  - 
+  - ThingsThatFly
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 466913095
+    locked: 0
+  - name: Leaves
+    uniqueID: 1264018451
     locked: 0
   - name: WindIndicator
     uniqueID: 270943615

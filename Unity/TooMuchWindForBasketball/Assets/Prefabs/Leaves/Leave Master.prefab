@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 466913095
-  m_SortingLayer: 4
+  m_SortingLayerID: 1264018451
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7791742886103884341, guid: ee67c561107bb4dfe9837104a775a567,
     type: 3}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89f2ac0e84314afe9398b01e3a23978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToLiveLimits: {x: 2, y: 20}
+  timeToLiveLimits: {x: 2, y: 10}
   joint: {fileID: 0}
 --- !u!233 &329143643794253998
 HingeJoint2D:
