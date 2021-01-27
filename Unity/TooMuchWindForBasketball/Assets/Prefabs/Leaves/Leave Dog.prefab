@@ -148,5 +148,35 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.59
       objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 24026dc287de9456d8eb675de9bd2388, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a6a98ae0752047dd8dbeac2bf5bbbfa, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: bfef92230fe65441a90e3470a396d5a5, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0680a09e9cbcc498b847eead2b0757e1, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c5050152ce2d4da4bd747db4f033578, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dafc31fb97b448558c9aa7fa5bbf344, type: 3}

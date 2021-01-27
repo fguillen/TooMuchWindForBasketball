@@ -24,17 +24,4 @@ public class BallController : MonoBehaviour
         rb.isKinematic = false;
         rb.AddForce(direction * impulse);
     }
-
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     BallAudioController.instance.BouncingSound();
-    // }
-
-    void OnCollisionEnter2D(Collision2D collisionInfo)
-    {
-        float magnitude = collisionInfo.relativeVelocity.magnitude;
-        BallAudioController.instance.BouncingSound(magnitude);
-    }
-
-
 }

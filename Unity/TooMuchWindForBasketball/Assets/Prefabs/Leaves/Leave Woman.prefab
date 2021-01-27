@@ -96,7 +96,7 @@ PrefabInstance:
     - target: {fileID: 7481930543683605140, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
       propertyPath: m_Name
-      value: Leave Car 05
+      value: Leave Woman
       objectReference: {fileID: 0}
     - target: {fileID: 8194283246592933159, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
@@ -121,12 +121,42 @@ PrefabInstance:
     - target: {fileID: 8194283246592933159, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.48
+      value: 3.38
       objectReference: {fileID: 0}
     - target: {fileID: 8194283246592933159, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.59
+      value: 3.87
       objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 180bb83cc9b1e405a83cc7d0d5f5051e, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d458b3e53efd5435281922ef915dcede, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 07e11f8f53aaa43d5ac062e0941a02d8, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: c9c1a597636274beb82bc70be8685b53, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7118c0030789e407caf49bf019dc70c9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dafc31fb97b448558c9aa7fa5bbf344, type: 3}

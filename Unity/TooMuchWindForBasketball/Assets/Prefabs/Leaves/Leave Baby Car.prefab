@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 7481930543683605140, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
       propertyPath: m_Name
-      value: Leave Car 04
+      value: Leave Baby Car
       objectReference: {fileID: 0}
     - target: {fileID: 8194283246592933159, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
@@ -148,5 +148,30 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.87
       objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5debde56dd8db46b298312a118ca5df0, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1872e4625d8364547b2000b5dd505ec3, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7dddc7e463ddd4fc398d92ef7370be10, type: 3}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: collisionClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e08ce601c28c4b69944a32b90b1699a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dafc31fb97b448558c9aa7fa5bbf344, type: 3}

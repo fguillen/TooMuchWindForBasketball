@@ -56,6 +56,8 @@ MonoBehaviour:
   - {fileID: 6953451701242434905, guid: 29ead577407904c349f6a688f1f6832b, type: 3}
   - {fileID: 6953451701242434905, guid: c1de27551b11a4024bab46c76131c799, type: 3}
   - {fileID: 2638911513934923137, guid: df61b9e1f4eaa4605b0ed82c44d423d6, type: 3}
+  - {fileID: 6953451701242434905, guid: 5f26f11a141944f6098535dae32e65a0, type: 3}
+  - {fileID: 6953451701242434905, guid: d1db30579c4ba4196b5d7834367d4b45, type: 3}
   time: 0.01
   timeCounter: 0
   initialImpulseRange: 100
