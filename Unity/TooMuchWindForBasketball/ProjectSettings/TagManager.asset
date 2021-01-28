@@ -28,8 +28,8 @@ TagManager:
   - CameraBox
   - OnCameraLeaves
   - ThingsThatFly
-  - 
-  - 
+  - ScenarioBorders
+  - EndScreen
   - 
   - 
   - 

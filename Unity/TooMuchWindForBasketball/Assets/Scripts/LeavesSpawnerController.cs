@@ -7,7 +7,7 @@ public class LeavesSpawnerController : MonoBehaviour
     [SerializeField] GameObject[] leafTemplates;
 
     [SerializeField] float time;
-    [SerializeField] float timeCounter;
+    float timeCounter;
     [SerializeField] float initialImpulseRange;
 
     // Start is called before the first frame update

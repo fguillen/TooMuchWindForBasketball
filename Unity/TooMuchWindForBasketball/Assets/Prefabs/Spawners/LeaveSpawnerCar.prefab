@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5050917269761877159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058448, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: initialImpulseRange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: leafTemplates.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: leafTemplates.Array.data[0]
+      value: 
+      objectReference: {fileID: 6953451701242434905, guid: 6f6c565bac6fa4b58a6dee7a0dcfb328,
+        type: 3}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: leafTemplates.Array.data[1]
+      value: 
+      objectReference: {fileID: 6953451701242434905, guid: b465b69cd93be423584560b5da04833a,
+        type: 3}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: leafTemplates.Array.data[2]
+      value: 
+      objectReference: {fileID: 6953451701242434905, guid: a24325424d4b54a569f8138e7d6cb4ee,
+        type: 3}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: leafTemplates.Array.data[3]
+      value: 
+      objectReference: {fileID: 6953451701242434905, guid: 8f79c8c732049400ca0d329f53dbfe04,
+        type: 3}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: leafTemplates.Array.data[4]
+      value: 
+      objectReference: {fileID: 6953451701242434905, guid: 2fab2fe7770d244719245ae6b9085ec0,
+        type: 3}
+    - target: {fileID: 6168960272167058455, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: m_Name
+      value: LeaveSpawnerCar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e, type: 3}
