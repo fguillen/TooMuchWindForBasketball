@@ -56,7 +56,7 @@ public class LeaveController : MonoBehaviour
 
     void GoToTheCamera()
     {
-        leafOnTheCameraController.GoToTheCamera();
+        leafOnTheCameraController.GoToCamera();
     }
 
 }

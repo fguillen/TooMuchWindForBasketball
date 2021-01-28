@@ -8,7 +8,7 @@ public class LeafOnTheCameraController : MonoBehaviour
     [SerializeField] Vector2 timeToLiveLimits;
     [SerializeField] Joint2D joint;
     float timeToLiveCounter;
-    bool isOnTheCamera;
+    bool isInFrontOfCamera;
 
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
@@ -25,7 +25,7 @@ public class LeafOnTheCameraController : MonoBehaviour
 
     void Update()
     {
-        if(isOnTheCamera)
+        if(isInFrontOfCamera)
         {
             CheckIfItShouldBeRelieved();
         }
@@ -42,23 +42,23 @@ public class LeafOnTheCameraController : MonoBehaviour
     void Relieve()
     {
         joint.enabled = false;
-        isOnTheCamera = false;
+        isInFrontOfCamera = false;
 
         gameObject.layer = LayerMask.NameToLayer("NoStickyLeaves");
     }
 
-    public void GoToTheCamera()
+    public void GoToCamera()
     {
         gameObject.layer = LayerMask.NameToLayer("OnCameraLeaves");
 
-        Vector3 inCameraPoint = GetInCameraPoint();
-        transform.DOMove(inCameraPoint, 2).SetEase(Ease.InQuint).OnComplete(OnCamera);
+        Vector3 inCameraPoint = GetInFrontOfCameraPoint();
+        transform.DOMove(inCameraPoint, 2).SetEase(Ease.Linear).OnComplete(InFrontOfCamera);
         transform.DOLocalRotate(new Vector3(3f, 10f, 0f), 0.05f).SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear).SetRelative();
 
         spriteRenderer.sortingLayerName = "InFrontOfCamera";
     }
 
-    void OnCamera()
+    void InFrontOfCamera()
     {
         print("I'm in the Camera");
         transform.DOKill();
@@ -67,12 +67,12 @@ public class LeafOnTheCameraController : MonoBehaviour
 
     void TouchingCamera()
     {
-        isOnTheCamera = true;
+        isInFrontOfCamera = true;
         joint.enabled = true;
         timeToLiveCounter = Random.Range(timeToLiveLimits.x, timeToLiveLimits.y);
     }
 
-    Vector3 GetInCameraPoint()
+    Vector3 GetInFrontOfCameraPoint()
     {
         Vector3 cameraPointLimitNW = LeavesOnTheCameraController.instance.cameraPointLimitNW.position;
         Vector3 cameraPointLimitSE = LeavesOnTheCameraController.instance.cameraPointLimitSE.position;
