@@ -82,7 +82,9 @@ public class PlayerController : MonoBehaviour
                 direction = new Vector3(-direction.x, direction.y, direction.z);
             
             ball.transform.parent = null;
-            ball.GetComponent<BallController>().Shoot(direction, force);            
+            ball.GetComponent<BallController>().Shoot(direction, force);   
+
+            LevelsController.instance.IncreseTries();         
         }
     }
 
@@ -122,9 +124,19 @@ public class PlayerController : MonoBehaviour
 
         // Change the Ball Layer
         if(value)
-            BallController.instance.SetLayer("BallFree");
+        {
+            if(BallController.instance.gameObject.layer != LayerMask.NameToLayer("BallFree"))
+            {
+                BallController.instance.SetLayer("BallFree");
+            }
+        }
         else
-            BallController.instance.SetLayer("Ball");
+        {
+            if(BallController.instance.gameObject.layer != LayerMask.NameToLayer("Ball"))
+            {
+                BallController.instance.SetLayer("Ball");
+            }
+        }
 
         // ShootBall
         if(value)

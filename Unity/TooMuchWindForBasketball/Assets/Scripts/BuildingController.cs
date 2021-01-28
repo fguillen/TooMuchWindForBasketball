@@ -14,6 +14,8 @@ public class BuildingController : MonoBehaviour
 
     public void WindTargetEnabled(bool value)
     {
+        print("WindTargetEnabled: " + value);
+        
         rb.isKinematic = !value;
         windTargetController.enabled = value;
 

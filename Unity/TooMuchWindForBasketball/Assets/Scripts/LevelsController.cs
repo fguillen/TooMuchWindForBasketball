@@ -20,10 +20,14 @@ using System;
     [SerializeField] public bool playerWindTargetEnabled;
 
     [SerializeField] public bool startEndScene;
+
+    [SerializeField] public float nextLevelSeconds;
+    [SerializeField] public int nextLevelTries;
 }
 
 public class LevelsController : MonoBehaviour
 {
+    public static LevelsController instance;
     [SerializeField] LeavesSpawnerController[] leavesSpawners;
     [SerializeField] LeavesSpawnerController[] bsrSpawners;
     [SerializeField] LeavesSpawnerController[] peopleSpawners;
@@ -36,6 +40,13 @@ public class LevelsController : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] EndSceneController endSceneController;
     [SerializeField] int levelIndex;
+
+    int thisLevelTriesRemaining;
+    float thisLevelSecondsRemaining;
+    Level actualLevel;
+    Level[] levels;
+
+    bool isInitialized;
     [SerializeField] Level level0;
     [SerializeField] Level level1;
     [SerializeField] Level level2;
@@ -52,35 +63,39 @@ public class LevelsController : MonoBehaviour
     [SerializeField] Level level13;
     [SerializeField] Level level14;
     [SerializeField] Level level15;
-        [SerializeField] Level level16;
-
-    Level actualLevel;
-
-    Level[] levels;
-
-    bool isInitialized;
+    [SerializeField] Level level16;
 
 
     void Awake()
     {
-        print("Awake");
+        instance = this;
         levels = new Level[] { level0, level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13, level14, level15, level16 };
         isInitialized = true;
     }
 
     void Start()
     {
-        print("Start");
         SetLevel(0);
+    }
+
+    void Update()
+    {
+        thisLevelSecondsRemaining -= Time.deltaTime;
+
+        if(
+            thisLevelSecondsRemaining <= 0 &&
+            thisLevelTriesRemaining <= 0
+        )
+        {
+            if(actualLevel != levels[levels.Length - 1])
+                NextLevel();
+        }
     }
 
     void OnValidate()
     {
-        print("OnValidate");
-
         if(isInitialized)
         {
-            print("OnValidate in");
             SetLevel(levelIndex);
         }
     }
@@ -88,8 +103,11 @@ public class LevelsController : MonoBehaviour
     void SetLevel(int level)
     {
         this.levelIndex = level;
-        print("levelIndex: " + this.levelIndex);
         actualLevel = levels[this.levelIndex];
+        print("Actual Level: " + actualLevel.name);
+
+        thisLevelSecondsRemaining = actualLevel.nextLevelSeconds;
+        thisLevelTriesRemaining = actualLevel.nextLevelTries;
 
         SetSpawnersFrequency(leavesSpawners, actualLevel.leavesSpawnerTimeFrequency);
         SetSpawnersFrequency(bsrSpawners, actualLevel.bsrSpawnerTimeFrequency);
@@ -124,22 +142,48 @@ public class LevelsController : MonoBehaviour
     {
         foreach (var buildingController in buildingControllers)
         {
-            buildingController?.WindTargetEnabled(value);
+            if(
+                buildingController != null &&
+                buildingController.gameObject != null
+            )
+                buildingController.WindTargetEnabled(value);
         }
     }
 
     void SetBasketWindTargetEnabled(BasketController basketController, bool value)
     {
-        basketController?.WindTargetEnabled(value);
+        if(
+            basketController != null &&
+            basketController.gameObject != null
+        )
+            basketController.WindTargetEnabled(value);
     }
 
     void SetWindIndicatorWindTargetEnabled(WindIndicatorController windIndicatorController, bool value)
     {
-        windIndicatorController?.WindTargetEnabled(value);
+        if(
+            windIndicatorController != null &&
+            windIndicatorController.gameObject != null)
+         
+            windIndicatorController.WindTargetEnabled(value);
     }
 
     void SetPlayerWindTargetEnabled(PlayerController playerController, bool value)
     {
-        playerController?.WindTargetEnabled(value);
+        if(
+            playerController != null &&
+            playerController.gameObject != null
+        )
+            playerController.WindTargetEnabled(value);
+    }
+
+    public void IncreseTries()
+    {
+        thisLevelTriesRemaining --;
+    }
+
+    void NextLevel()
+    {
+        SetLevel(levelIndex + 1);
     }
 }

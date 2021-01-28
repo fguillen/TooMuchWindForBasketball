@@ -3948,6 +3948,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 5
   level1:
     name: Leaves
     leavesSpawnerTimeFrequency: {x: 0.1, y: 2}
@@ -3962,6 +3964,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 2
   level2:
     name: Leaves on Camera
     leavesSpawnerTimeFrequency: {x: 0.1, y: 0.5}
@@ -3976,6 +3980,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 1
   level3:
     name: BSR
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -3990,6 +3996,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 1
   level4:
     name: People
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4004,6 +4012,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 1
   level5:
     name: Cars
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4018,12 +4028,14 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 20
+    nextLevelTries: 1
   level6:
     name: Cars a lot
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
     bsrSpawnerTimeFrequency: {x: 2, y: 5}
     peopleSpawnerTimeFrequency: {x: 2, y: 10}
-    carsSpawnerTimeFrequency: {x: 0.1, y: 2}
+    carsSpawnerTimeFrequency: {x: 0.1, y: 1}
     ubahnSpawnerTimeFrequency: {x: 0, y: 0}
     windForce: {x: 20, y: 40}
     leavesOnCameraEnabled: 1
@@ -4032,6 +4044,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 40
+    nextLevelTries: 0
   level7:
     name: Peace
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4046,6 +4060,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 20
+    nextLevelTries: 1
   level8:
     name: Strong Wind
     leavesSpawnerTimeFrequency: {x: 0.1, y: 0.2}
@@ -4060,6 +4076,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 2
   level9:
     name: Ubahn
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4067,13 +4085,15 @@ MonoBehaviour:
     peopleSpawnerTimeFrequency: {x: 0, y: 0}
     carsSpawnerTimeFrequency: {x: 0, y: 0}
     ubahnSpawnerTimeFrequency: {x: 5, y: 10}
-    windForce: {x: 10, y: 50}
+    windForce: {x: 10, y: 30}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 30
+    nextLevelTries: 0
   level10:
     name: All
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4088,6 +4108,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 40
+    nextLevelTries: 0
   level11:
     name: Clean
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4102,6 +4124,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 20
+    nextLevelTries: 1
   level12:
     name: Buildings
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
@@ -4116,6 +4140,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 10
+    nextLevelTries: 0
   level13:
     name: WindIndicator
     leavesSpawnerTimeFrequency: {x: 0.5, y: 2}
@@ -4130,6 +4156,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 10
+    nextLevelTries: 0
   level14:
     name: Basket
     leavesSpawnerTimeFrequency: {x: 0.5, y: 2}
@@ -4144,6 +4172,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 0
     startEndScene: 0
+    nextLevelSeconds: 10
+    nextLevelTries: 1
   level15:
     name: Player
     leavesSpawnerTimeFrequency: {x: 0.1, y: 1}
@@ -4158,6 +4188,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 1
     startEndScene: 0
+    nextLevelSeconds: 5
+    nextLevelTries: 0
   level16:
     name: EndScene
     leavesSpawnerTimeFrequency: {x: 0.1, y: 1}
@@ -4172,6 +4204,8 @@ MonoBehaviour:
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 1
     startEndScene: 1
+    nextLevelSeconds: 0
+    nextLevelTries: 1000
 --- !u!4 &1631830681
 Transform:
   m_ObjectHideFlags: 0
