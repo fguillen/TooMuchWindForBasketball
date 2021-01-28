@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingController : MonoBehaviour
+public class WindIndicatorController : MonoBehaviour
 {
     WindTargetController windTargetController;
     Rigidbody2D rb;
-    void Start()
+    void Awake()
     {
         windTargetController = GetComponent<WindTargetController>();
         rb = GetComponent<Rigidbody2D>();

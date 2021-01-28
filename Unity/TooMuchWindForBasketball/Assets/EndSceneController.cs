@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
-public class EndScreenController : MonoBehaviour
+public class EndSceneController : MonoBehaviour
 {
-    [SerializeField] Joint2D joint;
+    public static EndSceneController instance;
+    Joint2D joint;
     bool isOnTheCamera;
     [SerializeField] Vector3 finalPosition;
     WindTargetController windTargetController;
 
     Rigidbody2D rb;
-    void Start()
+
+    bool isStarted;
+
+    [SerializeField] GameObject textObject;
+
+    void Awake()
     {
-        // Invoke("GoToTheCamera", 10f);
-        GoToTheCamera();
+        instance = this; 
 
         joint = GetComponent<Joint2D>();
         rb = GetComponent<Rigidbody2D>();
         windTargetController = GetComponent<WindTargetController>();
-        joint.enabled = false;
     }
 
     public void GoToTheCamera()
@@ -46,5 +51,16 @@ public class EndScreenController : MonoBehaviour
     void ActivateWind()
     {
         windTargetController.enabled = true;
+    }
+
+    public void StartEndScene()
+    {
+        if(!isStarted)
+        {
+            isStarted = true;
+            textObject.SetActive(true);
+            joint.enabled = false;
+            GoToTheCamera();
+        }
     }
 }

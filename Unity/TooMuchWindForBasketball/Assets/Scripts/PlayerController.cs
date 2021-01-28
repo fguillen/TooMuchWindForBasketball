@@ -16,7 +16,20 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public bool hasTheBallCaught { get; set; }
 
-    // Start is called before the first frame update
+    Rigidbody2D rb;
+
+    WindTargetController windTargetController;
+
+    PlayerMovementController playerMovementController;
+    PlayerImpulseController playerImpulseController;
+
+    void Awake()
+    {
+        windTargetController = GetComponent<WindTargetController>();
+        rb = GetComponent<Rigidbody2D>();        
+        playerMovementController = GetComponent<PlayerMovementController>();
+        playerImpulseController = GetComponent<PlayerImpulseController>();
+    }
     void Start()
     {
         hasTheBallCaught = false;
@@ -41,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         ball.transform.parent = ballHandler.transform;
         ball.transform.position = ballHandler.transform.position;
-        ball.GetComponent<BallController>().StopGravity();
+        ball.GetComponent<BallController>().Hold();
         hasTheBallCaught = true;
     }
 
@@ -55,6 +68,8 @@ public class PlayerController : MonoBehaviour
 
     public void ShootBall(float angle, float force)
     {
+        print("angle: " + angle + ", force: " + force);
+
         if(hasTheBallCaught)
         {
             hasTheBallCaught = false;
@@ -73,5 +88,32 @@ public class PlayerController : MonoBehaviour
     {
         points ++;
         CanvasController.instance.RenderPoints(points);
+    }
+    public void WindTargetEnabled(bool value)
+    {
+        windTargetController.enabled = value;
+
+        playerMovementController.enabled = !value;
+        playerImpulseController.enabled = !value;
+
+        // Set Constraints
+        if(value)
+            rb.constraints = RigidbodyConstraints2D.None;
+        else 
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        // Torque
+        if(value)
+            rb.AddTorque(-100f);        
+
+        // Change the Ball Layer
+        if(value)
+            BallController.instance.SetLayer("BallFree");
+        else
+            BallController.instance.SetLayer("Ball");
+
+        // ShootBall
+        if(value)
+            ShootBall(0f, 700f);
     }
 }

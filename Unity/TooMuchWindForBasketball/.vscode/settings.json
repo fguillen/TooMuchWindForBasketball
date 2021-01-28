@@ -56,5 +56,11 @@
     "cSpell.words": [
         "behaviour",
         "ubahn"
+    ],
+    "cSpell.ignoreWords": [
+        "mesh",
+        "pro",
+        "text",
+        "ugui"
     ]
 }

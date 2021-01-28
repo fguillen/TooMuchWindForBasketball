@@ -16,5 +16,8 @@ public class BasketController : MonoBehaviour
     {
         rb.isKinematic = !value;
         windTargetController.enabled = value;
+
+        if(value)
+            rb.AddTorque(-100f);
     }
 }

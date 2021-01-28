@@ -6,7 +6,7 @@ using System;
 
 [Serializable] public class Level
 {
-    [SerializeField] string name;
+    [SerializeField] public string name;
     [SerializeField] public Vector2 leavesSpawnerTimeFrequency;
     [SerializeField] public Vector2 bsrSpawnerTimeFrequency;
     [SerializeField] public Vector2 peopleSpawnerTimeFrequency;
@@ -15,7 +15,11 @@ using System;
     [SerializeField] public Vector2 windForce;
     [SerializeField] public bool leavesOnCameraEnabled;
     [SerializeField] public bool buildingsWindTargetEnabled;
+    [SerializeField] public bool windIndicatorWindTargetEnabled;
     [SerializeField] public bool basketWindTargetEnabled;
+    [SerializeField] public bool playerWindTargetEnabled;
+
+    [SerializeField] public bool startEndScene;
 }
 
 public class LevelsController : MonoBehaviour
@@ -28,6 +32,9 @@ public class LevelsController : MonoBehaviour
     [SerializeField] WindController windController;
     [SerializeField] BuildingController[] buildingControllers;
     [SerializeField] BasketController basketController;
+    [SerializeField] WindIndicatorController windIndicatorController;
+    [SerializeField] PlayerController playerController;
+    [SerializeField] EndSceneController endSceneController;
     [SerializeField] int levelIndex;
     [SerializeField] Level level0;
     [SerializeField] Level level1;
@@ -43,6 +50,9 @@ public class LevelsController : MonoBehaviour
     [SerializeField] Level level11;
     [SerializeField] Level level12;
     [SerializeField] Level level13;
+    [SerializeField] Level level14;
+    [SerializeField] Level level15;
+        [SerializeField] Level level16;
 
     Level actualLevel;
 
@@ -54,7 +64,7 @@ public class LevelsController : MonoBehaviour
     void Awake()
     {
         print("Awake");
-        levels = new Level[] { level0, level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13 };
+        levels = new Level[] { level0, level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13, level14, level15, level16 };
         isInitialized = true;
     }
 
@@ -89,10 +99,17 @@ public class LevelsController : MonoBehaviour
 
         windController.SetForceLimits(actualLevel.windForce.x, actualLevel.windForce.y);
 
-        SetBuildingsWindTargetEnabled(buildingControllers, actualLevel.buildingsWindTargetEnabled);
-        SetBasketWindTargetEnabled(basketController, actualLevel.basketWindTargetEnabled);
-
         LeavesOnTheCameraController.instance.SetActive(actualLevel.leavesOnCameraEnabled);
+
+        SetBuildingsWindTargetEnabled(buildingControllers, actualLevel.buildingsWindTargetEnabled);
+        SetWindIndicatorWindTargetEnabled(windIndicatorController, actualLevel.windIndicatorWindTargetEnabled);
+        SetBasketWindTargetEnabled(basketController, actualLevel.basketWindTargetEnabled);
+        SetPlayerWindTargetEnabled(playerController, actualLevel.playerWindTargetEnabled);
+
+        if(actualLevel.startEndScene)
+            endSceneController.StartEndScene();
+
+        CanvasController.instance.RenderLevelName(actualLevel.name);
     }
 
     void SetSpawnersFrequency(LeavesSpawnerController[] spawnerControllers, Vector2 frequency)
@@ -107,12 +124,22 @@ public class LevelsController : MonoBehaviour
     {
         foreach (var buildingController in buildingControllers)
         {
-            buildingController.WindTargetEnabled(value);
+            buildingController?.WindTargetEnabled(value);
         }
     }
 
     void SetBasketWindTargetEnabled(BasketController basketController, bool value)
     {
-        basketController.WindTargetEnabled(value);
+        basketController?.WindTargetEnabled(value);
+    }
+
+    void SetWindIndicatorWindTargetEnabled(WindIndicatorController windIndicatorController, bool value)
+    {
+        windIndicatorController?.WindTargetEnabled(value);
+    }
+
+    void SetPlayerWindTargetEnabled(PlayerController playerController, bool value)
+    {
+        playerController?.WindTargetEnabled(value);
     }
 }

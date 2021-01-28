@@ -10,29 +10,33 @@ public class CanvasController : MonoBehaviour
     [SerializeField] TextMeshProUGUI pointsText;
     [SerializeField] TextMeshProUGUI forceText;
     [SerializeField] TextMeshProUGUI angleText;
+    [SerializeField] TextMeshProUGUI levelNameText;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
-        RenderPoints(0);
-        InvokeRepeating("RenderForce", 1.0f, 0.5f);
-        InvokeRepeating("RenderAngle", 1.0f, 0.5f);
     }
 
+    void Start()
+    {
+        RenderPoints(0);
+        RenderLevelName("None");
+        InvokeRepeating("RenderForceAndAngle", 1.0f, 1f);
+    }
 
     public void RenderPoints(int value)
     {
         pointsText.text = "Points: " + value.ToString();
     }
 
-    public void RenderForce()
+    public void RenderForceAndAngle()
     {
         forceText.text = "Wind Force: " + Mathf.CeilToInt(WindController.instance.GetForce()).ToString();
+        angleText.text = "Wind Angle: " + Mathf.CeilToInt(WindController.instance.GetAngle()).ToString();
     }
 
-    public void RenderAngle()
+    public void RenderLevelName(string levelName)
     {
-        angleText.text = "Wind Angle: " + Mathf.CeilToInt(WindController.instance.GetAngle()).ToString();
+        levelNameText.text = "Level: \"" + levelName + "\"";
     }
 }
