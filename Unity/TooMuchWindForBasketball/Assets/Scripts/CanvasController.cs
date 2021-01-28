@@ -54,7 +54,6 @@ public class CanvasController : MonoBehaviour
     void Start()
     {
         RenderPoints(0);
-        RenderLevelName("None");
         SetInvokeRepeating();
         SetDebugTextEnabled();
     }

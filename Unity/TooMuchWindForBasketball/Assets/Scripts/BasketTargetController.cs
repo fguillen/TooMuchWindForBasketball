@@ -16,7 +16,10 @@ public class BasketTargetController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown("t"))
+        {
+            TargetAchieved();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -26,15 +29,20 @@ public class BasketTargetController : MonoBehaviour
             // Only if the ball is falling down
             if(other.GetComponent<Rigidbody2D>().velocity.y < 0)
             {
-                PlayerController.instance.IncreasePoints();
-                ShowBasketEffect();
+                TargetAchieved();        
             }
         }
     }
 
+    void TargetAchieved()
+    {
+        PlayerController.instance.IncreasePoints();
+        ShowBasketEffect();
+    }
+
     void ShowBasketEffect()
     {
-        Instantiate(basketEffect, transform.position, Quaternion.identity);
+        Instantiate(basketEffect, transform.position, Quaternion.Euler(90f, 0f, 0f));
         BasketNetController.instance.Move();
         audioSource.Play();
     }
