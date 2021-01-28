@@ -154,4 +154,9 @@ public class WindController : MonoBehaviour
         return force;
     }
 
+    public void SetForceLimits(float ini, float end)
+    {
+        forceLimits = new Vector2(ini, end);
+    }
+
 }

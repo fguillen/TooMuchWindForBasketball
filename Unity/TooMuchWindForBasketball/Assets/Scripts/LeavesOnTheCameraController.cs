@@ -8,6 +8,7 @@ public class LeavesOnTheCameraController : MonoBehaviour
     [SerializeField] public Transform cameraPointLimitSE;
 
     public static LeavesOnTheCameraController instance;
+    [SerializeField] bool isActive;
 
     void Awake()
     {
@@ -49,5 +50,15 @@ public class LeavesOnTheCameraController : MonoBehaviour
     //    }
     //    return true;
     // }
+
+    public void SetActive(bool value)
+    {
+        isActive = value;
+    }
+
+    public bool IsActive()
+    {
+        return isActive;
+    }
 }
 

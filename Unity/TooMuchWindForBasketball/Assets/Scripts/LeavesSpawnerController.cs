@@ -13,18 +13,21 @@ public class LeavesSpawnerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawn();
+        IniFrequencyCounter();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeFrequencyCounter -= Time.deltaTime;
-
-        if(timeFrequencyCounter <= 0f)
+        // timeFrequency.y == 0f means this Spawner is not enabled
+        if(timeFrequency.y != 0f)
         {
-            Spawn();
-            timeFrequencyCounter = Random.Range(timeFrequency.x, timeFrequency.y);
+            timeFrequencyCounter -= Time.deltaTime;
+            
+            if(timeFrequencyCounter <= 0f)
+            {
+                Spawn();
+            }
         }
     }
 
@@ -39,5 +42,18 @@ public class LeavesSpawnerController : MonoBehaviour
         }
 
         LeavesController.instance.AddLeaf(leaf);
+        
+        IniFrequencyCounter();
+    }
+
+    public void SetFrequency(float ini, float end)
+    {
+        timeFrequency = new Vector2(ini, end);
+        IniFrequencyCounter();
+    }
+
+    void IniFrequencyCounter()
+    {
+        timeFrequencyCounter = Random.Range(timeFrequency.x, timeFrequency.y);
     }
 }

@@ -46,7 +46,11 @@ public class LeaveController : MonoBehaviour
     {
         isSticky = false;
 
-        if(leafOnTheCameraController.enabled && Random.Range(0, 20) == 0)
+        if(
+            LeavesOnTheCameraController.instance.IsActive() &&
+            leafOnTheCameraController.enabled && 
+            Random.Range(0, 20) == 0
+        )
         {
             GoToTheCamera();
         } else {
