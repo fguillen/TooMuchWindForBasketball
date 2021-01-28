@@ -11,17 +11,52 @@ public class CanvasController : MonoBehaviour
     [SerializeField] TextMeshProUGUI forceText;
     [SerializeField] TextMeshProUGUI angleText;
     [SerializeField] TextMeshProUGUI levelNameText;
+    [SerializeField] bool debugEnabled;
+    bool lastDebugEnabled;
 
     void Awake()
     {
         instance = this;
     }
 
+    void Update()
+    {
+        if(lastDebugEnabled != debugEnabled)
+        {
+            lastDebugEnabled = debugEnabled;
+            SetInvokeRepeating();
+            SetDebugTextEnabled();
+        }
+
+        if(Input.GetKeyDown("o"))
+        {
+            debugEnabled = !debugEnabled;
+        }
+    }
+
+    void SetInvokeRepeating()
+    {
+        if(debugEnabled)
+        {
+            InvokeRepeating("RenderForceAndAngle", 0f, 1f);
+        } else {
+            CancelInvoke("LaunchProjectile");
+        }
+    }
+
+    void SetDebugTextEnabled()
+    {
+        forceText.enabled = debugEnabled;
+        angleText.enabled = debugEnabled;
+        levelNameText.enabled = debugEnabled;
+    }
+
     void Start()
     {
         RenderPoints(0);
         RenderLevelName("None");
-        InvokeRepeating("RenderForceAndAngle", 1.0f, 1f);
+        SetInvokeRepeating();
+        SetDebugTextEnabled();
     }
 
     public void RenderPoints(int value)
