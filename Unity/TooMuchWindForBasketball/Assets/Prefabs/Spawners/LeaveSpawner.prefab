@@ -48,6 +48,5 @@ MonoBehaviour:
   - {fileID: 7481930543683605140, guid: 906893d93ac39412292b84d75d8f3a22, type: 3}
   - {fileID: 7481930543683605140, guid: 969c7164a1d3645c180744edb8f51243, type: 3}
   - {fileID: 7481930543683605140, guid: 6f1b2663bc3a94159922e635c287b73b, type: 3}
-  time: 0.01
-  timeCounter: 0
-  initialImpulseRange: 100
+  timeFrequency: {x: 0.1, y: 0.5}
+  initialImpulseRange: {x: -1000, y: 1000}

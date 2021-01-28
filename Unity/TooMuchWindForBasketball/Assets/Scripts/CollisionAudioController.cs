@@ -13,15 +13,15 @@ public class CollisionAudioController : MonoBehaviour
     AudioSource audioSource;
     LinearProportionConverter magnitudeToVolume;
 
-    void Update()
-    {
-        minimumTimeBetweenSoundsCounter -= Time.deltaTime;
-    }
-
-    void Start()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         IniMagnitudeToVolume();
+    }
+
+    void Update()
+    {
+        minimumTimeBetweenSoundsCounter -= Time.deltaTime;
     }
     
     void PlayCollisionSound(float magnitude)

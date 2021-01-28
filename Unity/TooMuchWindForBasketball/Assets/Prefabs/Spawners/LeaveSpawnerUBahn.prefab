@@ -69,6 +69,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
         type: 3}
+      propertyPath: timeFrequency.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
+      propertyPath: timeFrequency.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
+        type: 3}
       propertyPath: initialImpulseRange
       value: 200
       objectReference: {fileID: 0}

@@ -8,7 +8,7 @@ public class LeavesController : MonoBehaviour
 
     public static LeavesController instance;
 
-    void Start()
+    void Awake()
     {
         instance = this;
         leaves = new List<GameObject>();

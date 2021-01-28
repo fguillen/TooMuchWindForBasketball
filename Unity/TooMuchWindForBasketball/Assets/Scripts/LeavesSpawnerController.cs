@@ -6,25 +6,25 @@ public class LeavesSpawnerController : MonoBehaviour
 {
     [SerializeField] GameObject[] leafTemplates;
 
-    [SerializeField] float time;
-    float timeCounter;
-    [SerializeField] float initialImpulseRange;
+    [SerializeField] Vector2 timeFrequency;
+    float timeFrequencyCounter;
+    [SerializeField] Vector2 initialImpulseRange;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeCounter = 0f;
+        Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeCounter += Time.deltaTime;
+        timeFrequencyCounter -= Time.deltaTime;
 
-        if(timeCounter > time)
+        if(timeFrequencyCounter <= 0f)
         {
             Spawn();
-            timeCounter = 0f;
+            timeFrequencyCounter = Random.Range(timeFrequency.x, timeFrequency.y);
         }
     }
 
@@ -35,7 +35,7 @@ public class LeavesSpawnerController : MonoBehaviour
 
         if(leaf.GetComponent<LeaveController>())
         {
-            leaf.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(-initialImpulseRange, initialImpulseRange), 0f, 0f));
+            leaf.GetComponent<LeaveController>().rb.AddForce(new Vector3(UnityEngine.Random.Range(initialImpulseRange.x, initialImpulseRange.y), 0f, 0f));
         }
 
         LeavesController.instance.AddLeaf(leaf);
