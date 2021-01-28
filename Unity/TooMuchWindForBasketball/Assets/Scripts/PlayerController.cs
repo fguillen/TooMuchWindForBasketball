@@ -125,7 +125,9 @@ public class PlayerController : MonoBehaviour
         // Change the Ball Layer
         if(value)
         {
-            if(BallController.instance.gameObject.layer != LayerMask.NameToLayer("BallFree"))
+            if(
+                BallController.instance != null &&
+                BallController.instance.gameObject.layer != LayerMask.NameToLayer("BallFree"))
             {
                 BallController.instance.SetLayer("BallFree");
             }

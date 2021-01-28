@@ -6,6 +6,8 @@ public class LeaveDestroyColliderController : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D other)
     {        
+        print("LeaveDestroyColliderController tag: " + other.gameObject.tag);
+
         if(other.gameObject.CompareTag("Leaf"))
         {
             LeavesController.instance.AddLeaf(other.gameObject);
@@ -22,5 +24,10 @@ public class LeaveDestroyColliderController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {        
+        print("LeaveDestroyColliderController Trigger tag: " + other.gameObject.tag);
     }
 }
