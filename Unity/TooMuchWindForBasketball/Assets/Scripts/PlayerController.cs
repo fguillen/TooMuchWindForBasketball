@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject ball;    
     [SerializeField] GameObject ballHandler;
+    [SerializeField] Transform points2;
+    [SerializeField] Transform points3;
 
     [SerializeField] int points;
 
@@ -86,9 +88,21 @@ public class PlayerController : MonoBehaviour
 
     public void IncreasePoints()
     {
-        points ++;
+        points += CalculatePoints();
         CanvasController.instance.RenderPoints(points);
     }
+
+    int CalculatePoints()
+    {
+        if(transform.position.x > points3.position.x)
+            return 3;
+
+        if(transform.position.x > points2.position.x)
+            return 2;
+        
+        return 1;
+    }
+
     public void WindTargetEnabled(bool value)
     {
         windTargetController.enabled = value;

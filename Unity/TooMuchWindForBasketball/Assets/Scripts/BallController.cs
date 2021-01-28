@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public static BallController instance;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     WindTargetController windTargetController;
     Collider2D theCollider;
 
