@@ -45,3 +45,4 @@ I would like to know if it is possible to give them some live and turn them into
 - Basket collisions: https://freesound.org/people/FullMetalJedi/sounds/530130/
 - Wind: https://freesound.org/people/Fabrizio84/sounds/457667/
 - Wind Indicator fall: https://freesound.org/people/simonjsounds/sounds/260004/
+- Tachan and claps: https://freesound.org/people/dobroide/sounds/38692/

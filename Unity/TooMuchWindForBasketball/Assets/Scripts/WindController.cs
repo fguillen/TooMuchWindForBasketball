@@ -183,8 +183,6 @@ public class WindController : MonoBehaviour
     void WindVolumeAdjust()
     {
         audioSource.volume = forceToVolume.CalculateDimension2Value(force);
-
-        print("audioSource.volume: " + audioSource.volume);
     }
 }
 

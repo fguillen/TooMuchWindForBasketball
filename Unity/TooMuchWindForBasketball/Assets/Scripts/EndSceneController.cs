@@ -11,6 +11,7 @@ public class EndSceneController : MonoBehaviour
     [SerializeField] Vector3 finalPosition;
     WindTargetController windTargetController;
     Rigidbody2D rb;
+    AudioSource audioSource;
 
     bool isStarted;
 
@@ -23,11 +24,13 @@ public class EndSceneController : MonoBehaviour
         joint = GetComponent<Joint2D>();
         rb = GetComponent<Rigidbody2D>();
         windTargetController = GetComponent<WindTargetController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void GoToTheCamera()
     {
-        transform.DOMove(finalPosition, 2).SetEase(Ease.InQuint).OnComplete(OnCamera);
+        audioSource.Play();
+        transform.DOMove(finalPosition, 2f).SetEase(Ease.InQuint).OnComplete(OnCamera);
         transform.DOLocalRotate(new Vector3(3f, 10f, 0f), 0.05f).SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear).SetRelative();
     }
 

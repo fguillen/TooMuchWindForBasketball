@@ -18,6 +18,7 @@ using System;
     [SerializeField] public bool windIndicatorWindTargetEnabled;
     [SerializeField] public bool basketWindTargetEnabled;
     [SerializeField] public bool playerWindTargetEnabled;
+    [SerializeField] public bool pointsIndicatorsWindTargetEnabled;
 
     [SerializeField] public bool startEndScene;
 
@@ -35,6 +36,7 @@ public class LevelsController : MonoBehaviour
     [SerializeField] LeavesSpawnerController[] ubahnSpawners;
     [SerializeField] WindController windController;
     [SerializeField] BuildingController[] buildingControllers;
+    [SerializeField] PointsIndicatorController[] pointsIndicatorControllers;
     [SerializeField] BasketController basketController;
     [SerializeField] WindIndicatorController windIndicatorController;
     [SerializeField] PlayerController playerController;
@@ -64,12 +66,13 @@ public class LevelsController : MonoBehaviour
     [SerializeField] Level level14;
     [SerializeField] Level level15;
     [SerializeField] Level level16;
+    [SerializeField] Level level17;
 
 
     void Awake()
     {
         instance = this;
-        levels = new Level[] { level0, level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13, level14, level15, level16 };
+        levels = new Level[] { level0, level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12, level13, level14, level15, level16, level17 };
         isInitialized = true;
     }
 
@@ -122,6 +125,7 @@ public class LevelsController : MonoBehaviour
         SetBuildingsWindTargetEnabled(buildingControllers, actualLevel.buildingsWindTargetEnabled);
         SetWindIndicatorWindTargetEnabled(windIndicatorController, actualLevel.windIndicatorWindTargetEnabled);
         SetBasketWindTargetEnabled(basketController, actualLevel.basketWindTargetEnabled);
+        SetPointsIndicatorsWindTargetEnabled(pointsIndicatorControllers, actualLevel.pointsIndicatorsWindTargetEnabled);
         SetPlayerWindTargetEnabled(playerController, actualLevel.playerWindTargetEnabled);
 
         if(actualLevel.startEndScene)
@@ -166,6 +170,18 @@ public class LevelsController : MonoBehaviour
             windIndicatorController.gameObject != null)
          
             windIndicatorController.WindTargetEnabled(value);
+    }
+
+    void SetPointsIndicatorsWindTargetEnabled(PointsIndicatorController[] pointsIndicatorsControllers, bool value)
+    {
+        foreach (var pointsIndicatorController in pointsIndicatorsControllers)
+        {
+            if(
+                pointsIndicatorController != null &&
+                pointsIndicatorController.gameObject != null
+            )
+                pointsIndicatorController.WindTargetEnabled(value);
+        }
     }
 
     void SetPlayerWindTargetEnabled(PlayerController playerController, bool value)
