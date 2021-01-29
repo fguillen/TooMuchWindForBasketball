@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeaveDestroyColliderController : MonoBehaviour
+public class LeavesDestroyColliderController : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D other)
     {        

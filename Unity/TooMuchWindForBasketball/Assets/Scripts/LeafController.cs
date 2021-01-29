@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeaveController : MonoBehaviour
+public class LeafController : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D rb;
     [SerializeField] Vector2 timeToLiveLimits;
