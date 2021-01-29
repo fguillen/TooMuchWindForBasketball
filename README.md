@@ -41,3 +41,7 @@ I would like to know if it is possible to give them some live and turn them into
 - Dog toy: https://freesound.org/people/ScreamStudio/sounds/392617/
 - Baby sounds: https://freesound.org/people/andreaskg/sounds/537312/
 - Woman ouch: https://freesound.org/people/pyro13djt/sounds/331938/
+- Building falling: https://freesound.org/people/craigsmith/sounds/438332/
+- Basket collisions: https://freesound.org/people/FullMetalJedi/sounds/530130/
+- Wind: https://freesound.org/people/Fabrizio84/sounds/457667/
+- Wind Indicator fall: https://freesound.org/people/simonjsounds/sounds/260004/

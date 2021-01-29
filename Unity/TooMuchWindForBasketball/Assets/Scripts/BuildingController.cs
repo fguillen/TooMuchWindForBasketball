@@ -6,20 +6,35 @@ public class BuildingController : MonoBehaviour
 {
     WindTargetController windTargetController;
     Rigidbody2D rb;
-    void Start()
+    AudioSource audioSource;
+
+    void Awake()
     {
         windTargetController = GetComponent<WindTargetController>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void WindTargetEnabled(bool value)
     {
         print("WindTargetEnabled: " + value);
         
-        rb.isKinematic = !value;
-        windTargetController.enabled = value;
-
         if(value)
-            rb.AddTorque(-100f);
+        {
+            Invoke("Collapse", Random.Range(0, 4));
+        } else 
+        {
+            rb.isKinematic = true;
+            windTargetController.enabled = false;
+        }
+    }
+
+    public void Collapse()
+    {
+        audioSource.Play();
+
+        rb.isKinematic = false;
+        windTargetController.enabled = true;
+        rb.AddTorque(Random.Range(-50f, -100f));
     }
 }

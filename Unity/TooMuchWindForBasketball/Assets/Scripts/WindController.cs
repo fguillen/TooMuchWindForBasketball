@@ -26,18 +26,29 @@ public class WindController : MonoBehaviour
 
     bool isFlipped;
 
-    // Start is called before the first frame update
-    void Start()
+    AudioSource audioSource;
+    [SerializeField] Vector2 windVolumeLimits;
+    [SerializeField] Vector2 forceForSoundLimits;
+    LinearProportionConverter forceToVolume;
+
+    void Awake()
     {
         instance = this;
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        IniForceToVolume();
         IniBigAngleChangeSecondsCounter();
         IniBigForceChangeSecondsCounter();
         IniFlipDirectionSecondsCounter();
+        PlayWindSound();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        WindVolumeAdjust();
         ChangeAngleSmall();
         ChangeForceSmall();
         CheckBigChanges();
@@ -159,4 +170,21 @@ public class WindController : MonoBehaviour
         forceLimits = new Vector2(ini, end);
     }
 
+    void IniForceToVolume()
+    {
+        forceToVolume = new LinearProportionConverter(forceForSoundLimits.x, forceForSoundLimits.y, windVolumeLimits.x, windVolumeLimits.y);
+    }
+
+    void PlayWindSound()
+    {
+        audioSource.Play();
+    }
+
+    void WindVolumeAdjust()
+    {
+        audioSource.volume = forceToVolume.CalculateDimension2Value(force);
+
+        print("audioSource.volume: " + audioSource.volume);
+    }
 }
+

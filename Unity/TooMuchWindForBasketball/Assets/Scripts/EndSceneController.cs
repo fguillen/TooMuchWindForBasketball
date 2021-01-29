@@ -8,10 +8,8 @@ public class EndSceneController : MonoBehaviour
 {
     public static EndSceneController instance;
     Joint2D joint;
-    bool isOnTheCamera;
     [SerializeField] Vector3 finalPosition;
     WindTargetController windTargetController;
-
     Rigidbody2D rb;
 
     bool isStarted;
@@ -42,7 +40,6 @@ public class EndSceneController : MonoBehaviour
 
     void TouchingCamera()
     {
-        isOnTheCamera = true;
         joint.enabled = true;
 
         Invoke("ActivateWind", 2f);
