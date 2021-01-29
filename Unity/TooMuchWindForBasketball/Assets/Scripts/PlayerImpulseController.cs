@@ -32,38 +32,49 @@ public class PlayerImpulseController : MonoBehaviour
     {
         if(PlayerController.instance.hasTheBallCaught)
         {
-            arrowSprite.enabled = true;
-
+            CheckShowArrow();
             CheckAngle();
             CheckForce();
             CheckForceReleased();
             RenderArrow();
-        } else {
+        }
+    }
+
+    void CheckShowArrow()
+    {
+        if(Input.GetButton("Jump"))
+        {
+            arrowSprite.enabled = true;
+        } else{
             arrowSprite.enabled = false;
         }
     }
 
     void CheckAngle()
     {
-        float vertical = Input.GetAxisRaw("Vertical");
+        // Only change angle if we are pushing the button
+        if(Input.GetButton("Jump"))
+        {
+            float vertical = Input.GetAxisRaw("Vertical");
 
-        if(vertical > 0)
-            angle -= angleStep * Time.deltaTime;
+            if(vertical > 0)
+                angle -= angleStep * Time.deltaTime;
 
-        if(vertical < 0)
-            angle += angleStep * Time.deltaTime;
+            if(vertical < 0)
+                angle += angleStep * Time.deltaTime;
 
-        if(angle < 0)
-            angle = 360 + angle;
+            if(angle < 0)
+                angle = 360 + angle;
 
-        if(angle > 360)
-            angle = angle - 360;
+            if(angle > 360)
+                angle = angle - 360;
 
-        if(angle < angleLimits.x)
-            angle = angleLimits.x;
+            if(angle < angleLimits.x)
+                angle = angleLimits.x;
 
-        if(angle > angleLimits.y)
-            angle = angleLimits.y;
+            if(angle > angleLimits.y)
+                angle = angleLimits.y;
+        }
     }
 
     void CheckForce()
