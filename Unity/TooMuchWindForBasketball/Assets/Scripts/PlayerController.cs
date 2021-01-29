@@ -70,8 +70,6 @@ public class PlayerController : MonoBehaviour
 
     public void ShootBall(float angle, float force)
     {
-        print("angle: " + angle + ", force: " + force);
-
         if(hasTheBallCaught)
         {
             hasTheBallCaught = false;

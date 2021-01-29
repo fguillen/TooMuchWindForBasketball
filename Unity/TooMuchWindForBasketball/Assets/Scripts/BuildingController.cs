@@ -16,9 +16,7 @@ public class BuildingController : MonoBehaviour
     }
 
     public void WindTargetEnabled(bool value)
-    {
-        print("WindTargetEnabled: " + value);
-        
+    {        
         if(value)
         {
             Invoke("Collapse", Random.Range(0, 4));

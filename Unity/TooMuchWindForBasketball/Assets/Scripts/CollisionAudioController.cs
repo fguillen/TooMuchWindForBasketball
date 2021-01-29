@@ -29,8 +29,6 @@ public class CollisionAudioController : MonoBehaviour
         float volume = magnitudeToVolume.CalculateDimension1Value(magnitude);
         minimumTimeBetweenSoundsCounter = minimumTimeBetweenSounds;
 
-        // print("PlayCollisionSound. magnitude: " + magnitude + ", volume: " + volume);
-
         // If volume is above maximum we put maximum
         if(volume > soundVolumeLimits.y)
             volume = soundVolumeLimits.y;

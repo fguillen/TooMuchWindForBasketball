@@ -60,7 +60,6 @@ public class LeafOnTheCameraController : MonoBehaviour
 
     void InFrontOfCamera()
     {
-        print("I'm in the Camera");
         transform.DOKill();
         transform.DOLocalRotate(new Vector3(0f, 0f, 0f), 1f).SetEase(Ease.OutBounce).OnComplete(TouchingCamera);
     }
