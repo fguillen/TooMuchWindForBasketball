@@ -134,7 +134,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(BallController.instance.gameObject.layer != LayerMask.NameToLayer("Ball"))
+            if(
+                BallController.instance != null &&
+                BallController.instance.gameObject.layer != LayerMask.NameToLayer("Ball")
+            )
             {
                 BallController.instance.SetLayer("Ball");
             }

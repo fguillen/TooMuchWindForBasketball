@@ -17,7 +17,7 @@ public class PointsIndicatorController : MonoBehaviour
     {        
         if(value)
         {
-            Invoke("Collapse", Random.Range(0, 4));
+            Invoke("Collapse", Random.Range(0, 2.5f));
         } else 
         {
             rb.isKinematic = true;
