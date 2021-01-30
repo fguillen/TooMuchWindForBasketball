@@ -13,10 +13,12 @@ public class CanvasController : MonoBehaviour
     [SerializeField] TextMeshProUGUI levelNameText;
     [SerializeField] bool debugEnabled;
     bool lastDebugEnabled;
+    Animator animator;
 
     void Awake()
     {
         instance = this;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -48,7 +50,6 @@ public class CanvasController : MonoBehaviour
     {
         forceText.enabled = debugEnabled;
         angleText.enabled = debugEnabled;
-        levelNameText.enabled = debugEnabled;
     }
 
     void Start()
@@ -69,8 +70,9 @@ public class CanvasController : MonoBehaviour
         angleText.text = "Wind Angle: " + Mathf.CeilToInt(WindController.instance.GetAngle()).ToString();
     }
 
-    public void RenderLevelName(string levelName)
+    public void ShowLevelName(string levelName)
     {
-        levelNameText.text = "Level: \"" + levelName + "\"";
+        levelNameText.text = levelName;
+        animator.SetTrigger("showLevelName");
     }
 }

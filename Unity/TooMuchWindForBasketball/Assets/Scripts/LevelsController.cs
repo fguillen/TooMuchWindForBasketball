@@ -138,7 +138,7 @@ public class LevelsController : MonoBehaviour
         if(actualLevel.startEndScene)
             endSceneController.StartEndScene();
 
-        CanvasController.instance.RenderLevelName(actualLevel.name);
+        CanvasController.instance.ShowLevelName("Chapter " + (levelIndex + 1) + "\"" + actualLevel.name + "\"");
     }
 
     void SetSpawnersFrequency(LeavesSpawnerController[] spawnerControllers, Vector2 frequency)
