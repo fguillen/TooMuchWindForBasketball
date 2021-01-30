@@ -34,7 +34,7 @@ public class LeavesSpawnerController : MonoBehaviour
     void Spawn()
     {
         GameObject leafTemplate = leafTemplates[UnityEngine.Random.Range(0, leafTemplates.Length)];
-        GameObject leaf = Instantiate(leafTemplate, transform.position, Quaternion.identity);
+        GameObject leaf = Instantiate(leafTemplate, transform.position, leafTemplate.transform.rotation);
 
         if(leaf.GetComponent<LeafController>())
         {

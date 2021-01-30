@@ -35,6 +35,15 @@ TextureImporter:
   - first:
       213: 36191071468746285
     second: ThingsThatFly_10
+  - first:
+      213: -8830449824047682795
+    second: ThingsThatFly_11
+  - first:
+      213: 7571540782120827724
+    second: ThingsThatFly_12
+  - first:
+      213: 2904584122371912128
+    second: ThingsThatFly_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -164,7 +173,7 @@ TextureImporter:
         width: 506
         height: 338
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,7 +194,7 @@ TextureImporter:
         width: 490
         height: 259
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,7 +215,7 @@ TextureImporter:
         width: 586
         height: 276
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,7 +236,7 @@ TextureImporter:
         width: 273
         height: 287
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,7 +257,7 @@ TextureImporter:
         width: 338
         height: 387
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -269,7 +278,7 @@ TextureImporter:
         width: 494
         height: 357
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,7 +299,7 @@ TextureImporter:
         width: 403
         height: 312
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -311,7 +320,7 @@ TextureImporter:
         width: 330
         height: 354
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -332,7 +341,7 @@ TextureImporter:
         width: 448
         height: 259
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -353,7 +362,7 @@ TextureImporter:
         width: 1582
         height: 332
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -374,7 +383,7 @@ TextureImporter:
         width: 1543
         height: 337
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -382,6 +391,69 @@ TextureImporter:
       bones: []
       spriteID: d267fe67693908000800000000000000
       internalID: 36191071468746285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThingsThatFly_11
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 542
+        width: 234
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b2ab6bba0f37580800000000000000
+      internalID: -8830449824047682795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThingsThatFly_12
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 555
+        width: 196
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bf1b0c934831960800000000000000
+      internalID: 7571540782120827724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThingsThatFly_13
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1624
+        width: 2943
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1b732ced72f4820800000000000000
+      internalID: 2904584122371912128
       vertices: []
       indices: 
       edges: []

@@ -26,6 +26,8 @@ public class PlayerImpulseController : MonoBehaviour
         arrowOriginalSize = arrowSprite.size;
 
         instance = this;
+
+        CheckShowArrow();
     }
 
     void Update()

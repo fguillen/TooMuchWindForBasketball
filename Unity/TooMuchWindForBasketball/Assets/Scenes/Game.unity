@@ -1205,6 +1205,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eafae758422d4d07b6fb7c4cd815a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &576976847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1860173960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &576976848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1153764534703091520, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1860173960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b2a89150e8d46a48d8ab2c5aa85caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &578594634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1250,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 576976847}
   - {fileID: 1886210242}
   - {fileID: 126952317}
   - {fileID: 1928088763}
@@ -2229,26 +2248,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1938924384}
     m_Modifications:
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3969021499177959286, guid: 3b805af71fcb344f58c6062b0367460b,
         type: 3}
       propertyPath: m_RootOrder
@@ -3424,11 +3423,14 @@ MonoBehaviour:
   ubahnSpawners:
   - {fileID: 554171133}
   - {fileID: 660745511}
+  towerSpawners:
+  - {fileID: 0}
   windController: {fileID: 513951354}
   buildingControllers:
   - {fileID: 749232712}
   - {fileID: 75619539}
   - {fileID: 821571728}
+  towerController: {fileID: 576976848}
   pointsIndicatorControllers:
   - {fileID: 528369730}
   - {fileID: 1063156667}
@@ -3447,6 +3449,7 @@ MonoBehaviour:
     windForce: {x: 0, y: 10}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3464,6 +3467,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 20}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3481,6 +3485,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 20}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3498,6 +3503,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 30}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3515,6 +3521,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 30}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3532,6 +3539,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 30}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3549,6 +3557,7 @@ MonoBehaviour:
     windForce: {x: 20, y: 40}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3566,6 +3575,7 @@ MonoBehaviour:
     windForce: {x: 0, y: 10}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3583,6 +3593,7 @@ MonoBehaviour:
     windForce: {x: 30, y: 40}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3600,6 +3611,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 30}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3617,6 +3629,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 40}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3634,6 +3647,7 @@ MonoBehaviour:
     windForce: {x: 20, y: 30}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 0
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3651,14 +3665,33 @@ MonoBehaviour:
     windForce: {x: 40, y: 60}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
-    nextLevelSeconds: 10
+    nextLevelSeconds: 15
     nextLevelTries: 0
   level13:
+    name: Tower
+    leavesSpawnerTimeFrequency: {x: 0.1, y: 2}
+    bsrSpawnerTimeFrequency: {x: 0, y: 0}
+    peopleSpawnerTimeFrequency: {x: 0, y: 0}
+    carsSpawnerTimeFrequency: {x: 0, y: 0}
+    ubahnSpawnerTimeFrequency: {x: 0, y: 0}
+    windForce: {x: 20, y: 40}
+    leavesOnCameraEnabled: 0
+    buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 1
+    windIndicatorWindTargetEnabled: 0
+    basketWindTargetEnabled: 0
+    playerWindTargetEnabled: 0
+    pointsIndicatorsWindTargetEnabled: 0
+    startEndScene: 0
+    nextLevelSeconds: 15
+    nextLevelTries: 0
+  level14:
     name: WindIndicator
     leavesSpawnerTimeFrequency: {x: 0.5, y: 2}
     bsrSpawnerTimeFrequency: {x: 0, y: 0}
@@ -3668,6 +3701,7 @@ MonoBehaviour:
     windForce: {x: 40, y: 60}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 1
     basketWindTargetEnabled: 0
     playerWindTargetEnabled: 0
@@ -3675,7 +3709,7 @@ MonoBehaviour:
     startEndScene: 0
     nextLevelSeconds: 5
     nextLevelTries: 0
-  level14:
+  level15:
     name: Basket
     leavesSpawnerTimeFrequency: {x: 0.5, y: 2}
     bsrSpawnerTimeFrequency: {x: 10, y: 40}
@@ -3685,6 +3719,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 40}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 1
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 0
@@ -3692,7 +3727,7 @@ MonoBehaviour:
     startEndScene: 0
     nextLevelSeconds: 5
     nextLevelTries: 1
-  level15:
+  level16:
     name: Player
     leavesSpawnerTimeFrequency: {x: 0.1, y: 1}
     bsrSpawnerTimeFrequency: {x: 0, y: 0}
@@ -3702,6 +3737,7 @@ MonoBehaviour:
     windForce: {x: 30, y: 40}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 1
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 1
@@ -3709,7 +3745,7 @@ MonoBehaviour:
     startEndScene: 0
     nextLevelSeconds: 5
     nextLevelTries: 0
-  level16:
+  level17:
     name: PointsIndicators
     leavesSpawnerTimeFrequency: {x: 0.1, y: 1}
     bsrSpawnerTimeFrequency: {x: 0, y: 0}
@@ -3719,6 +3755,7 @@ MonoBehaviour:
     windForce: {x: 10, y: 40}
     leavesOnCameraEnabled: 0
     buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 1
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 1
@@ -3726,7 +3763,7 @@ MonoBehaviour:
     startEndScene: 0
     nextLevelSeconds: 3
     nextLevelTries: 0
-  level17:
+  level18:
     name: EndScene
     leavesSpawnerTimeFrequency: {x: 0.1, y: 1}
     bsrSpawnerTimeFrequency: {x: 0, y: 0}
@@ -3736,13 +3773,14 @@ MonoBehaviour:
     windForce: {x: 10, y: 40}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 1
+    towerWindTargetEnabled: 0
     windIndicatorWindTargetEnabled: 1
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 1
     pointsIndicatorsWindTargetEnabled: 1
     startEndScene: 1
     nextLevelSeconds: 0
-    nextLevelTries: 10000
+    nextLevelTries: 99999
 --- !u!4 &1631830681
 Transform:
   m_ObjectHideFlags: 0
@@ -4653,6 +4691,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfb956d2aa4b94cab8b12e1624fdd470, type: 3}
+--- !u!1001 &1860173960
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 578594635}
+    m_Modifications:
+    - target: {fileID: 1153764534703091520, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: firstImpulseForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434905, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_Name
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434905, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7803349
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.62536186
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 77.41701
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4860fc235b66f4bdb8b12b6dae3992c3, type: 3}
 --- !u!1 &1860988096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,7 +5658,7 @@ PrefabInstance:
     - target: {fileID: 32983314681517468, guid: 281f9633ac10e4721995a3500417d7d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 32983314681517468, guid: 281f9633ac10e4721995a3500417d7d8,
         type: 3}
@@ -5650,7 +5767,7 @@ PrefabInstance:
     - target: {fileID: 380929473887835247, guid: 175de5724d2bf4aafa7e4d094a067dde,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 380929473887835247, guid: 175de5724d2bf4aafa7e4d094a067dde,
         type: 3}
@@ -5719,7 +5836,7 @@ PrefabInstance:
     - target: {fileID: 3468200269003379390, guid: 98ee04c097dc8451eb9e6d0bdca30158,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3468200269003379390, guid: 98ee04c097dc8451eb9e6d0bdca30158,
         type: 3}
@@ -5785,26 +5902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1938924384}
     m_Modifications:
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969021499177959284, guid: 3b805af71fcb344f58c6062b0367460b,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 3969021499177959286, guid: 3b805af71fcb344f58c6062b0367460b,
         type: 3}
       propertyPath: m_RootOrder
@@ -6124,7 +6221,7 @@ PrefabInstance:
     - target: {fileID: 7157332764639656042, guid: 3052c39ef8510416195d68e31b8f0341,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7157332764639656042, guid: 3052c39ef8510416195d68e31b8f0341,
         type: 3}

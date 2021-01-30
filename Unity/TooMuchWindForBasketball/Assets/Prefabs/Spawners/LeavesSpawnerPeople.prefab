@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
         type: 3}
       propertyPath: leafTemplates.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
         type: 3}
@@ -109,18 +109,18 @@ PrefabInstance:
         type: 3}
       propertyPath: leafTemplates.Array.data[3]
       value: 
-      objectReference: {fileID: 6953451701242434905, guid: 8f79c8c732049400ca0d329f53dbfe04,
+      objectReference: {fileID: 6953451701242434905, guid: 35c4de08375c644cfb1073598dd5f4d1,
         type: 3}
     - target: {fileID: 6168960272167058449, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
         type: 3}
       propertyPath: leafTemplates.Array.data[4]
       value: 
-      objectReference: {fileID: 6953451701242434905, guid: 2fab2fe7770d244719245ae6b9085ec0,
+      objectReference: {fileID: 6953451701242434905, guid: e6913d63221784267a139c62a436d661,
         type: 3}
     - target: {fileID: 6168960272167058455, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e,
         type: 3}
       propertyPath: m_Name
-      value: LeaveSpawnerPeople
+      value: LeavesSpawnerPeople
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f8ad48fd9cb04aecb6085ec6259ef2e, type: 3}
