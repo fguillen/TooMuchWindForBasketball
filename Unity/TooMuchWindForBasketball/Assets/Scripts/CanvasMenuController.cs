@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CanvasMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject credits;
+
     void Start()
     {
         
@@ -12,6 +13,21 @@ public class CanvasMenuController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void ShowCredits()
+    {
+        credits.SetActive(true);
+    }
+
+    public void HideCredits()
+    {
+        credits.SetActive(false);
+    }
+
+    public void Play()
     {
         
     }
