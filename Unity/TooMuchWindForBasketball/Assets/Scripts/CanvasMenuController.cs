@@ -6,17 +6,6 @@ public class CanvasMenuController : MonoBehaviour
 {
     [SerializeField] GameObject credits;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ShowCredits()
     {
         credits.SetActive(true);
@@ -29,6 +18,6 @@ public class CanvasMenuController : MonoBehaviour
 
     public void Play()
     {
-        
+        LevelLoaderController.instance.LoadScene("Game");
     }
 }
