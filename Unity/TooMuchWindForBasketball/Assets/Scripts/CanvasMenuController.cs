@@ -20,4 +20,9 @@ public class CanvasMenuController : MonoBehaviour
     {
         LevelLoaderController.instance.LoadScene("Game");
     }
+
+    public void ShowHowToPlay()
+    {
+        HowToPlayController.instance.Show();
+    }
 }
