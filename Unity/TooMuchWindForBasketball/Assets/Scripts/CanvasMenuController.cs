@@ -8,12 +8,7 @@ public class CanvasMenuController : MonoBehaviour
 
     public void ShowCredits()
     {
-        credits.SetActive(true);
-    }
-
-    public void HideCredits()
-    {
-        credits.SetActive(false);
+        CreditsController.instance.Show();
     }
 
     public void Play()
