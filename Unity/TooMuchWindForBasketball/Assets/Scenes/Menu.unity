@@ -6082,10 +6082,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 578594635}
     m_Modifications:
+    - target: {fileID: 32983313228476602, guid: 281f9633ac10e4721995a3500417d7d8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.13759041
+      objectReference: {fileID: 0}
+    - target: {fileID: 32983313228476602, guid: 281f9633ac10e4721995a3500417d7d8,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.028583884
+      objectReference: {fileID: 0}
     - target: {fileID: 32983313444540700, guid: 281f9633ac10e4721995a3500417d7d8,
         type: 3}
       propertyPath: m_Layer
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 32983314574532596, guid: 281f9633ac10e4721995a3500417d7d8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.11708641
+      objectReference: {fileID: 0}
+    - target: {fileID: 32983314574532596, guid: 281f9633ac10e4721995a3500417d7d8,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.05834663
       objectReference: {fileID: 0}
     - target: {fileID: 32983314681517468, guid: 281f9633ac10e4721995a3500417d7d8,
         type: 3}
@@ -6146,6 +6166,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basket
+      objectReference: {fileID: 0}
+    - target: {fileID: 32983315042659886, guid: 281f9633ac10e4721995a3500417d7d8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.14758134
+      objectReference: {fileID: 0}
+    - target: {fileID: 32983315042659886, guid: 281f9633ac10e4721995a3500417d7d8,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03357935
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 281f9633ac10e4721995a3500417d7d8, type: 3}

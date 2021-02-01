@@ -42,7 +42,7 @@ public class CanvasController : MonoBehaviour
         {
             InvokeRepeating("RenderForceAndAngle", 0f, 1f);
         } else {
-            CancelInvoke("LaunchProjectile");
+            CancelInvoke("RenderForceAndAngle");
         }
     }
 

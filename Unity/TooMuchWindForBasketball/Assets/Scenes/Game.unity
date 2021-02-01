@@ -845,7 +845,7 @@ PrefabInstance:
     - target: {fileID: 2853013676976036372, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.1
+      value: 57.9
       objectReference: {fileID: 0}
     - target: {fileID: 2853013676976036372, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
@@ -1991,12 +1991,12 @@ PrefabInstance:
     - target: {fileID: 3885857611856314054, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
       propertyPath: m_Size.y
-      value: 53.855995
+      value: 82.91767
       objectReference: {fileID: 0}
     - target: {fileID: 3885857611856314054, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
       propertyPath: m_Offset.y
-      value: 2.951745
+      value: 17.482578
       objectReference: {fileID: 0}
     - target: {fileID: 3885857611856314054, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
@@ -2547,7 +2547,7 @@ MonoBehaviour:
     nextLevelSeconds: 20
     nextLevelTries: 1
   level12:
-    name: Poor buildings
+    name: The city is falling down
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
     bsrSpawnerTimeFrequency: {x: 0, y: 0}
     peopleSpawnerTimeFrequency: {x: 0, y: 0}
@@ -2563,9 +2563,9 @@ MonoBehaviour:
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
     nextLevelSeconds: 15
-    nextLevelTries: 0
+    nextLevelTries: 1
   level13:
-    name: I was not expecting this
+    name: Something big is falling
     leavesSpawnerTimeFrequency: {x: 0.1, y: 2}
     bsrSpawnerTimeFrequency: {x: 0, y: 0}
     peopleSpawnerTimeFrequency: {x: 0, y: 0}
@@ -2573,7 +2573,7 @@ MonoBehaviour:
     ubahnSpawnerTimeFrequency: {x: 0, y: 0}
     windForce: {x: 20, y: 40}
     leavesOnCameraEnabled: 0
-    buildingsWindTargetEnabled: 1
+    buildingsWindTargetEnabled: 0
     towerWindTargetEnabled: 1
     windIndicatorWindTargetEnabled: 0
     basketWindTargetEnabled: 0
@@ -2616,7 +2616,7 @@ MonoBehaviour:
     playerWindTargetEnabled: 0
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
-    nextLevelSeconds: 5
+    nextLevelSeconds: 10
     nextLevelTries: 1
   level16:
     name: I surrender
@@ -2634,7 +2634,7 @@ MonoBehaviour:
     playerWindTargetEnabled: 1
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
-    nextLevelSeconds: 5
+    nextLevelSeconds: 10
     nextLevelTries: 0
   level17:
     name: Nothing left
@@ -3317,6 +3317,11 @@ PrefabInstance:
       propertyPath: firstImpulseForce
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 1205901678785004348, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 6953451701242434905, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
         type: 3}
       propertyPath: m_Name
@@ -3334,13 +3339,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5461
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5461
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5461
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.6
+      value: -34.6
       objectReference: {fileID: 0}
     - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.4
+      value: 21.4
       objectReference: {fileID: 0}
     - target: {fileID: 6953451701242434910, guid: 4860fc235b66f4bdb8b12b6dae3992c3,
         type: 3}
@@ -4472,12 +4492,12 @@ PrefabInstance:
     - target: {fileID: 3885857611856314054, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
       propertyPath: m_Size.y
-      value: 54.051315
+      value: 82.62354
       objectReference: {fileID: 0}
     - target: {fileID: 3885857611856314054, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
       propertyPath: m_Offset.y
-      value: 2.327137
+      value: 16.61325
       objectReference: {fileID: 0}
     - target: {fileID: 3885857611856314054, guid: 53a37e6e71bdb4d7c8162e52be22f88e,
         type: 3}
