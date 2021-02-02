@@ -3453,7 +3453,7 @@ MonoBehaviour:
     peopleSpawnerTimeFrequency: {x: 0, y: 0}
     carsSpawnerTimeFrequency: {x: 0, y: 0}
     ubahnSpawnerTimeFrequency: {x: 0, y: 0}
-    windForce: {x: 10, y: 40}
+    windForce: {x: 20, y: 40}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 1
     towerWindTargetEnabled: 0
@@ -3471,10 +3471,10 @@ MonoBehaviour:
     peopleSpawnerTimeFrequency: {x: 0, y: 0}
     carsSpawnerTimeFrequency: {x: 10, y: 40}
     ubahnSpawnerTimeFrequency: {x: 0, y: 0}
-    windForce: {x: 10, y: 40}
+    windForce: {x: 20, y: 40}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 1
-    towerWindTargetEnabled: 0
+    towerWindTargetEnabled: 1
     windIndicatorWindTargetEnabled: 1
     basketWindTargetEnabled: 1
     playerWindTargetEnabled: 1

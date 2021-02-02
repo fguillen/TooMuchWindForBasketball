@@ -81,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 7481930543683605140, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
       propertyPath: m_Name
-      value: Leave Car UBahn 01
+      value: Leaf UBahn 01
       objectReference: {fileID: 0}
     - target: {fileID: 8194283246592933159, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
         type: 3}
@@ -122,6 +122,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: soundVolumeLimits.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249102749593060628, guid: 5dafc31fb97b448558c9aa7fa5bbf344,
+        type: 3}
+      propertyPath: minimumTimeBetweenSounds
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dafc31fb97b448558c9aa7fa5bbf344, type: 3}

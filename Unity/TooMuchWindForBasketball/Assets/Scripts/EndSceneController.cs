@@ -46,7 +46,7 @@ public class EndSceneController : MonoBehaviour
         joint.enabled = true;
 
         Invoke("ActivateWind", 2f);
-        Invoke("ShowEndButtons", 4f);
+        Invoke("ShowEndButtons", 10f);
     }
 
     void ActivateWind()
