@@ -5180,17 +5180,17 @@ PrefabInstance:
     - target: {fileID: 380929473887835244, guid: 175de5724d2bf4aafa7e4d094a067dde,
         type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 380929473887835244, guid: 175de5724d2bf4aafa7e4d094a067dde,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 380929473887835244, guid: 175de5724d2bf4aafa7e4d094a067dde,
         type: 3}
       propertyPath: m_GravityScale
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 380929473887835246, guid: 175de5724d2bf4aafa7e4d094a067dde,
         type: 3}
@@ -5419,6 +5419,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198683157065642619, guid: 670bcab4e0e374df0b2b8858b1dc5a5f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198683157976581869, guid: 670bcab4e0e374df0b2b8858b1dc5a5f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 670bcab4e0e374df0b2b8858b1dc5a5f, type: 3}
@@ -5992,6 +6002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EndScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394952674627041049, guid: f88ce6ece5ece45f88fa2a223ca2b8dd,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8394952674627041051, guid: f88ce6ece5ece45f88fa2a223ca2b8dd,
         type: 3}

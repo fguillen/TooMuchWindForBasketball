@@ -51,6 +51,7 @@ public class EndSceneController : MonoBehaviour
 
     void ActivateWind()
     {
+        rb.gravityScale = 3;
         windTargetController.enabled = true;
     }
 

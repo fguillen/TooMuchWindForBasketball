@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2631198641911946193}
   - component: {fileID: -7722532192652732937}
   m_Layer: 0
-  m_Name: LeafOnTheScreen Master
+  m_Name: LeafOnTheCamera Master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1392107693
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7010537895803775351, guid: ee67c561107bb4dfe9837104a775a567,
     type: 3}
@@ -155,5 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89f2ac0e84314afe9398b01e3a23978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToLiveLimits: {x: 1, y: 20}
+  timeToLiveLimits: {x: 3, y: 10}
   joint: {fileID: 2631198641911946192}
