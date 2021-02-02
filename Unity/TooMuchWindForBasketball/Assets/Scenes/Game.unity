@@ -3156,7 +3156,7 @@ MonoBehaviour:
     playerWindTargetEnabled: 0
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
-    nextLevelSeconds: 30
+    nextLevelSeconds: 20
     nextLevelTries: 5
   level1:
     name: So beautiful
@@ -3233,7 +3233,7 @@ MonoBehaviour:
   level5:
     name: I don't remember this has happened before
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
-    bsrSpawnerTimeFrequency: {x: 5, y: 20}
+    bsrSpawnerTimeFrequency: {x: 10, y: 20}
     peopleSpawnerTimeFrequency: {x: 2, y: 10}
     carsSpawnerTimeFrequency: {x: 2, y: 5}
     ubahnSpawnerTimeFrequency: {x: 0, y: 0}
@@ -3251,9 +3251,9 @@ MonoBehaviour:
   level6:
     name: Lot of things are flying today
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
-    bsrSpawnerTimeFrequency: {x: 2, y: 5}
+    bsrSpawnerTimeFrequency: {x: 5, y: 10}
     peopleSpawnerTimeFrequency: {x: 2, y: 10}
-    carsSpawnerTimeFrequency: {x: 0.1, y: 1}
+    carsSpawnerTimeFrequency: {x: 0.2, y: 1}
     ubahnSpawnerTimeFrequency: {x: 0, y: 0}
     windForce: {x: 20, y: 40}
     leavesOnCameraEnabled: 1
@@ -3264,7 +3264,7 @@ MonoBehaviour:
     playerWindTargetEnabled: 0
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
-    nextLevelSeconds: 40
+    nextLevelSeconds: 30
     nextLevelTries: 0
   level7:
     name: Looks like it is stoping
@@ -3309,7 +3309,7 @@ MonoBehaviour:
     peopleSpawnerTimeFrequency: {x: 0, y: 0}
     carsSpawnerTimeFrequency: {x: 0, y: 0}
     ubahnSpawnerTimeFrequency: {x: 5, y: 10}
-    windForce: {x: 10, y: 30}
+    windForce: {x: 10, y: 20}
     leavesOnCameraEnabled: 1
     buildingsWindTargetEnabled: 0
     towerWindTargetEnabled: 0
@@ -3323,9 +3323,9 @@ MonoBehaviour:
   level10:
     name: This is getting crowded
     leavesSpawnerTimeFrequency: {x: 0.5, y: 1}
-    bsrSpawnerTimeFrequency: {x: 2, y: 5}
-    peopleSpawnerTimeFrequency: {x: 5, y: 10}
-    carsSpawnerTimeFrequency: {x: 0.1, y: 1}
+    bsrSpawnerTimeFrequency: {x: 5, y: 10}
+    peopleSpawnerTimeFrequency: {x: 3, y: 10}
+    carsSpawnerTimeFrequency: {x: 0.2, y: 1}
     ubahnSpawnerTimeFrequency: {x: 10, y: 20}
     windForce: {x: 10, y: 40}
     leavesOnCameraEnabled: 0
@@ -3444,7 +3444,7 @@ MonoBehaviour:
     playerWindTargetEnabled: 1
     pointsIndicatorsWindTargetEnabled: 0
     startEndScene: 0
-    nextLevelSeconds: 10
+    nextLevelSeconds: 8
     nextLevelTries: 0
   level17:
     name: Nothing left
