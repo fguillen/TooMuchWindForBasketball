@@ -75,4 +75,24 @@ public class CanvasController : MonoBehaviour
         levelNameText.text = levelName;
         animator.SetTrigger("showLevelName");
     }
+
+    public void BackToMenu()
+    {
+        LevelLoaderController.instance.LoadScene("Menu");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Replay()
+    {
+        LevelLoaderController.instance.LoadScene("Game");
+    }
+
+    public void ShowEndButtons()
+    {
+        animator.SetBool("showEndButtons", true);
+    }
 }

@@ -245,7 +245,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 91fa3efa233b4438798e74d8db73389e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -318,8 +318,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9f7cf08f391264a5fb4a4b5657279385, type: 2}
-  m_sharedMaterial: {fileID: 4875715199375607957, guid: 9f7cf08f391264a5fb4a4b5657279385,
+  m_fontAsset: {fileID: 11400000, guid: 41e8d03bc770541849a7e740dad4e189, type: 2}
+  m_sharedMaterial: {fileID: -3321025344880700485, guid: 41e8d03bc770541849a7e740dad4e189,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -344,12 +344,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 24
+  m_fontSize: 123.05
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 100
+  m_fontSizeMax: 200
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

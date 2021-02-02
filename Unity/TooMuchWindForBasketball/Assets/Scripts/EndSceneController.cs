@@ -46,11 +46,17 @@ public class EndSceneController : MonoBehaviour
         joint.enabled = true;
 
         Invoke("ActivateWind", 2f);
+        Invoke("ShowEndButtons", 4f);
     }
 
     void ActivateWind()
     {
         windTargetController.enabled = true;
+    }
+
+    void ShowEndButtons()
+    {
+        CanvasController.instance.ShowEndButtons();
     }
 
     public void StartEndScene()
