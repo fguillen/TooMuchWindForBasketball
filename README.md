@@ -1,4 +1,8 @@
+![](https://media.giphy.com/media/WPbIFKgTjXXSaKOJUp/giphy-downsized.gif)
+
 # Too Much Wind For Basketball
+
+> It is a tiny sport simulator experience with some funny surprises (I hope)
 
 It is a game, but it also a story, a story about me, or maybe about you.
 
@@ -11,11 +15,19 @@ How strong the wind can become?
 
 ... Find out for your self. Look for "Too Much Wind for Basketball" at itch.io
 
+## Play it
 
+- https://arturitoproductions.itch.io/too-much-wind-for-basketball
 
-## Intro
+## Intro 
 
-This game is originally produced for the [Berlin Mini Jam](http://berlinminijam.de/) of 2021-01-23, where we have less than 8 hours to prototype and deliver your game.
+The objective it is to make a game that looks like it is a basketball simulator but in short time you realize that it is impossible to control. Little by little the wind is getting more and more strong and weird things happen like cars flying and people falling in the basket court.
+
+At the end everything is flown up and the game ends.
+
+## Berlin Mini Jam
+
+This game was originally born on the [Berlin Mini Jam](http://berlinminijam.de/) of 2021-01-23, where we have less than 8 hours to prototype and deliver your game.
 
 ## Themes
 
@@ -66,3 +78,5 @@ I would like to know if it is possible to give them some live and turn them into
   - https://freesound.org/people/AsdfgOrt/sounds/509481/
   - https://freesound.org/people/AsdfgOrt/sounds/509482/
   - https://freesound.org/people/NoiseCollector/sounds/222922/
+
+
