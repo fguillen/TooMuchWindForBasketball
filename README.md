@@ -4,7 +4,7 @@
 
 > It is a tiny sport simulator experience with some funny surprises (I hope)
 
-It is a game, but it also a story, a story about me, or maybe about you.
+It is a game and it is also a story, a story about me, or maybe about you.
 
 It is about this person, she is alone, but is not receiving this as a something negative, she is enjoying herself, she is playing basketball by herself. She is having fun, making some baskets...
 
